@@ -176,6 +176,7 @@ We will be using GitHub as a source code manager, as well as a place to keep all
   - There is no concept of "choosing what to throw", the last item picked up that is able to be thrown will be thrown. 
     - Coins, Hearts, and Keys are not able to be thrown.
     - A rock is an example of an item that can be thrown.
+  - "Advanced" feature: holding down the throw button makes the object go further.
 - **Coins / Points**
   - The player will gain points by picking up coins, beating the level quickly, and not dying.
   - Coins only influence the points earned at the end of a level and allow the player to obtain 1UPs. They have no other purpose, keeping the game mechanics simple and straightforward for the player. 
@@ -300,7 +301,7 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
   - Menu button press sound
     - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
   - Menu navigate sound
-    - This item is not part of the MVP, and is not included in the Semester 1 or 2plan.
+    - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
   - We would like the game to have background music.
 
 ### Code
@@ -360,22 +361,42 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
 
 ### Semester 2
 
-- Design and implement at least 3 more puzzle levels
-- Design and implement a final boss level where Reggie must face Foxtail
-- Implement defined items above not in Semester 1 plan:
-  - Character expressions / taunts
-  - Menu sounds
-  - "Achievement" score items after a level
-- Add animations to game mechanics
-- Debugging
-- Polishing
-- Finishing and refinement of features not completed in Semester 1
+- **Sprint 1 (3 weeks)**
+  - Discuss changes to this GDD
+  - Determine a detailed schedule for tasks throughout the semester
+  - Finish maze, lights on/off, memory, and jumping puzzles
+  - Meet with sound team
+  - Begin work on advanced features for picking up/throwing mechanic
+  - Start work on fixing Reggie player model
+  - Debugging from Semester 1
+- **Sprint 2 (3 weeks)**
+  - Finish advanced features for picking up/throwing mechanic
+  - Implement fall damage
+  - Create basic menus for the game (main menu, pause menu, end of level menu)
+    - Running out of 1UPs should return the player to the main menu
+  - Start work on NPC scripts
+  - Start work on Enemy models
+  - Finalize designs for remaining puzzles
+  - Playtesting
+- **Sprint 3 (3 weeks)**
+  - Complete remaining puzzles
+  - Finish NPC scripts
+  - Import NPC models
+  - Import fixed player model
+  - Implement player animations
+- **Sprint 4 (3 weeks)**
+  - Implement end of level door and link to end of level screen
+  - Implement remaining sounds
+  - Final debugging
+  - Final polishing
 
 **Expected Release: Spring 2019** 
 
 ### Contingency Plan
 
 In the event that the above plan is too optimistic and we must cut back the features in the game in order to meet our release date, these are the features that we plan to cut in order of priority (roughly):
+
+#### Semester 1
 
 1. Remove the picking up/throwing items mechanic
 2. Scale back number of levels and size of levels
@@ -385,6 +406,14 @@ In the event that the above plan is too optimistic and we must cut back the feat
 6. Remove Coins/scoring system
 7. Remove Foxtail entirely
 8. Remove heart mechanics. Make all damage events insta-kill.
+
+#### Semester 2
+
+1. Remove NPC scripts
+2. Remove the advanced features of picking up/throwing items mechanics
+3. Remove traps from map
+4. Reduce amount of sound effects
+5. Reduce number of puzzles
 
 <hr>
 
