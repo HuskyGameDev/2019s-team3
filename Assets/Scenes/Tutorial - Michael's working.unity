@@ -10341,9 +10341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 0}
   item: {fileID: 0}
-  moveSpeed: 10
-  jumpForce: 0
-  gravityScale: 0
+  baseMoveSpeed: 5
+  jumpForce: 15
+  gravityScale: 5
   FootStepFrequency: 1100
   pivot: {fileID: 584441911}
   rotateSpeed: 10
