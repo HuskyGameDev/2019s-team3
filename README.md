@@ -50,7 +50,7 @@ _This GDD is adapted from the GDD Template written by: Benjamin “HeadClot” S
 - Player has the ability to walk (default speed)
 - Player has the ability to dash (faster than walking)
   - The dash ability does not timeout; i.e. no stamina.
-- Player has the ability to single jump
+- Player has the ability to single jump and double jump
 - Player can pick-up coins distributed throughout levels by passing through the coin
 - Basic "pick-up-and-throw" mechanic that can be reused to complete puzzles, attack, placing treasure in inventory, etc.
 - Heart mechanic / 1UP mechanic - see the [Core Gameplay Mechanics (Detailed)](#core-gameplay-mechanics-detailed) section for more info
@@ -67,19 +67,12 @@ _This GDD is adapted from the GDD Template written by: Benjamin “HeadClot” S
 ### Project Scope
 
 - **The project will span 2 semesters at MTU (8 months)**
-- High Level Project Time Planning
-  - Semester 1
-    - Sprint 1: Develop character physics / create level 1
-    - Sprint 2: Continue developing physics and begin testing in first level
-    - Sprint 3: Refine character physics based on testing with level 1
-  - Semester 2
-    - Develop more levels/Debugging
-    - Polishing
+- [Project Timeline](#schedule)
 - 5-Member Team + Ancillary Sound Team
   - Core Programming Team
     - Evan Overweg
-      - Team Leader
-      - Scrum Master
+      - Team Leader (Fall 2018)
+      - Scrum Master (Fall 2018)
       - Programming
       - Level Design
     - Riley Mulford
@@ -89,6 +82,8 @@ _This GDD is adapted from the GDD Template written by: Benjamin “HeadClot” S
       - Art
       - Modeling
     - Michael Spoehr
+      - Team Leader (Current)
+      - Scrum Master (Current)
       - Programming
       - Level Design
       - Maintainer of this GDD
@@ -133,7 +128,7 @@ Temple of the Sun is a 3D platformer, styled similarly to games of the N64 era, 
 
 The goal of this project is to create a throwback 3D platformer reminiscent of classic 3D platformers from the N64 era. The game’s main protagonist will be a Tiger named Reggie who is an explorer, seeking lost treasures in the Temple of the Sun. The game’s main antagonist will be a Fox named Foxtail, who rivals Reggie and attempts to find the treasure before him. We aim to keep the game lighthearted and fun, making the player laugh at times and leaving them feeling refreshed. Additionally, we aim to keep the gameplay mechanics intentionally simple so that the game is easy to pick up and play.
 
-Our game will be developed using an Agile software development approach, namely Scrum. The game will be developed by a team of five, with Evan Overweg acting as Team Leader and Scrum Master. It is to be completed within 2 Semesters at MTU, or approximately 8 months. We aim to have Level 1 of the game, all of the character mechanics (not necessarily with animations), coins/hearts/1UP mechanics, a subset of all sounds, and a rudimentary menu system implemented by the end of Semester 1. The is what we define to be the Temple of the Sun MVP. Later levels, additional sounds, animations, and refinements will be completed in Semester 2.
+Our game will be developed using an Agile software development approach, namely Scrum. The game will be developed by a team of five, with Michael Spoehr acting as Team Leader and Scrum Master. It is to be completed within 2 Semesters at MTU, or approximately 8 months. We aim to have Level 1 of the game with all puzzles, all of the character mechanics with animations, coins/hearts/1UP mechanics with the associated sounds, and a rudimentary menu system implemented by the end of Semester 2. The is what we define to be the Temple of the Sun MVP.
 
 ### Project Description (Detailed)
 
@@ -143,9 +138,9 @@ The games main protagonist is a tiger named Reggie who is an explorer, seeking l
 
 We are aiming to keep the game lighthearted and fun, with colorful visuals and cheery, upbeat music. We want our player to feel joyous from playing our game. We want our game to evoke nostalgia in our audience who grew up in the N64 / Playstation 1 era, but also be a fun, new experience for the younger generation. The world will be relatively well lit incentivising exploration. We hope to evoke the feelings felt by gamers when they first starting playing classic 3D games.
 
-Our game will be developed using an Agile software development approach, namely Scrum. The game will be developed by a team of five, with Evan Overweg acting as Team Leader and Scrum Master as well as programmer. Riley Mulford, Michael Spoehr and Christian Clemmons will be programmers and Abri Ingrassia will handle the artwork and 3D models. It is to be completed within 2 Semesters at MTU, or approximately 8 months. We aim to have Level 1 of the game, all of the character mechanics (not necessarily with animations), coins/hearts/1UP mechanics, a subset of all sounds, and a rudimentary menu system implemented by the end of Semester 1. The is what we define to be the Temple of the Sun MVP. Later levels, additional sounds, animations, and refinements will be completed in Semester 2.
+Our game will be developed using an Agile software development approach, namely Scrum. The game will be developed by a team of five, with Evan Overweg acting as Team Leader and Scrum Master as well as programmer. Riley Mulford, Michael Spoehr and Christian Clemmons will be programmers and Abri Ingrassia will handle the artwork and 3D models. It is to be completed within 2 Semesters at MTU, or approximately 8 months. We aim to have Level 1 of the game with all puzzles, all of the character mechanics with animations, coins/hearts/1UP mechanics with the associated sounds, and a rudimentary menu system implemented by the end of Semester 2. The is what we define to be the Temple of the Sun MVP. If time provides, we want the game to be refined and polished. We will work on additional game levels if time provides at the end of the semester.
 
-Our team consists of several new members that are completely new to game development, so we are proceeding cautiously with our planning. We have implemented a [contingency plan](#contingency-plan) to account for the situation that we fall behind in implementation. New members are expected to get up to speed in Unity relatively quickly in the first semester, using the first sprint to learn the essentials. 
+Our team consists of veteran Husky Game Development members who have already had experience with Unity and with this project. However, we have implemented a [contingency plan](#contingency-plan) to account for the situation that we fall behind in implementation.
 
 We will be using GitHub as a source code manager, as well as a place to keep all issues/tasks. The taskboard will be the goto source of todo items and planning for the sprint. Additionally, the team will use Slack to communicate. Tentatively, we plan on having 4 hour workjams either Sunday afternoons or Saturday mornings as we see fit.
 
@@ -162,7 +157,7 @@ We will be using GitHub as a source code manager, as well as a place to keep all
 - **Jump**
   - The player can jump to overcome obstacles.
   - The player will be able to jump from platform to platform which will be essential to completing each level.
-  - The player will be able to jump a fixed height and cannot jump again until landing. 
+  - The player will be able to jump a fixed height and can jump again while in midair. They cannot jump again until landing. 
   - The player will be able to slightly control their movement in the air.
 - **Walk/Run**
   - The player will be able to walk or run throughout levels
@@ -171,16 +166,17 @@ We will be using GitHub as a source code manager, as well as a place to keep all
   - Running at all times (opposed to walking) is not advised. In order to enforce this in levels, we may take one of these strategies:
     - Running in certain areas causes damage to the player due to the environment
     - Running alerts enemies to the presence of the player
-    - This is not included in the Semester 1 plan, and will be implemented in Semester 2.
 - **Pick up items**
   - Player will be able to pick up items distributed throughout the levels.
+  - Some items, such as keys, are essential to completing the level and are not optional.
   - The player collects items by either running, jumping, or walking through the item.
 - **Throw**
   - Player can throw items previously collected to solve puzzles, attack, etc. 
   - By pressing “throw” button, player will toss item forward at target.
   - There is no concept of "choosing what to throw", the last item picked up that is able to be thrown will be thrown. 
-    - Coins and Hearts are not able to be thrown.
+    - Coins, Hearts, and Keys are not able to be thrown.
     - A rock is an example of an item that can be thrown.
+  - "Advanced" feature: holding down the throw button makes the object go further.
 - **Coins / Points**
   - The player will gain points by picking up coins, beating the level quickly, and not dying.
   - Coins only influence the points earned at the end of a level and allow the player to obtain 1UPs. They have no other purpose, keeping the game mechanics simple and straightforward for the player. 
@@ -204,11 +200,12 @@ Ever since Reggie was a child, he has had a desire to go on adventures. The youn
 
 - **Level 1**
   - Having just set off, Reggie must fight his way through the jungle to get to the Temple.
+  - Reggie must find seven key fragments hidden throughout the level to access t he end of the level. 
   - Reggie learns that Foxtail has been monitoring his progress
   - The level ends with Reggie finding the Temple.
 - **Level 2, etc.**
-  - Further levels are not within the scope of the Semester 1 plan and will be implemented in Semester 2. 
-  - The last level will end with Reggie beating Foxtail in a duel and scoring the hidden treasure in the Temple.
+  - Further levels are not within the scope of this project. 
+  - The last level is intended to end with Reggie beating Foxtail in a duel and scoring the hidden treasure in the Temple.
 
 ### Gameplay (Brief)
 
@@ -272,10 +269,10 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
       - Insects buzzing
       - Wind
       - Sticks snapping
-    - Level 2 - further levels have yet to be designed. This will be done in Semester 2.
+    - Level 2 - further levels have yet to be designed.
   - Inside
     - Level 1 - none required. 
-    - Level 2 - further levels have yet to be designed. This will be done in Semester 2.
+    - Level 2 - further levels have yet to be designed.
 - **Sound List (Player)**
   - Character Movement Sound List
     - Jumping causes a crunch noise when lifting off the ground
@@ -289,11 +286,11 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
   - Character Hit / Collision Sound list
     - Generic hurt sound
     - Reggie will make one of a set of different expressions; i.e. “Ouch!", "That hurt!", etc.
-      - This item is not part of the MVP, and is not included in the Semester 1 plan.
+      - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
   - Character on Injured / Death sound list
     - Generic death sound
     - Foxtail may make one of a set of different taunts; i.e. "Ha ha ha!", "I knew you wouldn't beat me!", etc.
-      - This item is not part of the MVP, and is not included in the Semester 1 plan.
+      - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
   - Item Pick-Up Sound List
     - Coin picked up
     - Heart picked up
@@ -302,10 +299,10 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
   - Level completed sound effect
   - Game over sound effect (running out of 1UPs)
   - Menu button press sound
-    - This item is not part of the MVP, and is not included in the Semester 1 plan.
+    - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
   - Menu navigate sound
-    - This item is not part of the MVP, and is not included in the Semester 1 plan.
-  - We would like the game to have background music. The specifics of this requirement will be discussed with the Sound Team before the end of Sprint 1.
+    - This item is not part of the MVP, and is not included in the Semester 1 or 2 plan.
+  - We would like the game to have background music.
 
 ### Code
 
@@ -315,7 +312,8 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
 ### NPC Scripts
 
 - Limited interactions with Foxtail in Level 1
-- More interactions (ending with a final boss battle, for later levels)
+- Simplistic interactions with wandering NPCs which can cause damage to the player
+  - I.e. the NPCs charge the player within a certain radius
 
 ### Animation
 
@@ -363,22 +361,42 @@ The pick-up-and-throw mechanic is the only non-movement mechanic in the game. Pl
 
 ### Semester 2
 
-- Design and implement at least 3 more puzzle levels
-- Design and implement a final boss level where Reggie must face Foxtail
-- Implement defined items above not in Semester 1 plan:
-  - Character expressions / taunts
-  - Menu sounds
-  - "Achievement" score items after a level
-- Add animations to game mechanics
-- Debugging
-- Polishing
-- Finishing and refinement of features not completed in Semester 1
+- **Sprint 1 (3 weeks)**
+  - Discuss changes to this GDD
+  - Determine a detailed schedule for tasks throughout the semester
+  - Finish maze, lights on/off, memory, and jumping puzzles
+  - Meet with sound team
+  - Begin work on advanced features for picking up/throwing mechanic
+  - Start work on fixing Reggie player model
+  - Debugging from Semester 1
+- **Sprint 2 (3 weeks)**
+  - Finish advanced features for picking up/throwing mechanic
+  - Implement fall damage
+  - Create basic menus for the game (main menu, pause menu, end of level menu)
+    - Running out of 1UPs should return the player to the main menu
+  - Start work on NPC scripts
+  - Start work on Enemy models
+  - Finalize designs for remaining puzzles
+  - Playtesting
+- **Sprint 3 (3 weeks)**
+  - Complete remaining puzzles
+  - Finish NPC scripts
+  - Import NPC models
+  - Import fixed player model
+  - Implement player animations
+- **Sprint 4 (3 weeks)**
+  - Implement end of level door and link to end of level screen
+  - Implement remaining sounds
+  - Final debugging
+  - Final polishing
 
 **Expected Release: Spring 2019** 
 
 ### Contingency Plan
 
 In the event that the above plan is too optimistic and we must cut back the features in the game in order to meet our release date, these are the features that we plan to cut in order of priority (roughly):
+
+#### Semester 1
 
 1. Remove the picking up/throwing items mechanic
 2. Scale back number of levels and size of levels
@@ -388,6 +406,14 @@ In the event that the above plan is too optimistic and we must cut back the feat
 6. Remove Coins/scoring system
 7. Remove Foxtail entirely
 8. Remove heart mechanics. Make all damage events insta-kill.
+
+#### Semester 2
+
+1. Remove NPC scripts
+2. Remove the advanced features of picking up/throwing items mechanics
+3. Remove traps from map
+4. Reduce amount of sound effects
+5. Reduce number of puzzles
 
 <hr>
 
