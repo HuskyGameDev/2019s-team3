@@ -17245,31 +17245,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9050074cedf4984899974aea78a6783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  square1: {fileID: 1252627710}
-  square2: {fileID: 1429200772}
-  square3: {fileID: 1059560257}
-  square4: {fileID: 1548892653}
-  square5: {fileID: 833912272}
-  square6: {fileID: 875227017}
-  square7: {fileID: 1072345360}
-  square8: {fileID: 1200171814}
-  square9: {fileID: 920101767}
-  square10: {fileID: 873001625}
-  square11: {fileID: 1055111262}
-  square12: {fileID: 1390750170}
-  square13: {fileID: 631719770}
-  square14: {fileID: 1923064228}
-  square15: {fileID: 311418020}
-  square16: {fileID: 1700153146}
-  square17: {fileID: 1132139652}
-  square18: {fileID: 319717342}
-  square19: {fileID: 806106410}
-  square20: {fileID: 1286423760}
-  square21: {fileID: 1791569176}
-  square22: {fileID: 642387073}
-  square23: {fileID: 1131930970}
-  square24: {fileID: 1984137689}
-  square25: {fileID: 1527966643}
+  squares:
+  - {fileID: 1252627710}
+  - {fileID: 1429200772}
+  - {fileID: 1059560257}
+  - {fileID: 1548892653}
+  - {fileID: 833912272}
+  - {fileID: 875227017}
+  - {fileID: 1072345360}
+  - {fileID: 1200171814}
+  - {fileID: 920101767}
+  - {fileID: 873001625}
+  - {fileID: 1055111262}
+  - {fileID: 1390750170}
+  - {fileID: 631719770}
+  - {fileID: 1923064228}
+  - {fileID: 311418020}
+  - {fileID: 1700153146}
+  - {fileID: 1132139652}
+  - {fileID: 319717342}
+  - {fileID: 806106410}
+  - {fileID: 1286423760}
+  - {fileID: 1791569176}
+  - {fileID: 642387073}
+  - {fileID: 1131930970}
+  - {fileID: 1984137689}
+  - {fileID: 1527966643}
 --- !u!114 &1169474067
 MonoBehaviour:
   m_ObjectHideFlags: 0
