@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IThrowable {
-
     void PickUp();
-    void Throw();
+    void Throw(float throwspeed);
 }
