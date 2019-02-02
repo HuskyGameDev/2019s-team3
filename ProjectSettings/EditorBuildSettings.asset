@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon.unity
     guid: dd2fd67394c0acd479f21908b42bc12a
+  - enabled: 1
+    path: Assets/Scenes/Tutorial - Christian.unity
+    guid: 6dd72fbfd884e594c8c37b0511c43a52
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 28fa5710483dce04fb69185617241846
   m_configObjects: {}
