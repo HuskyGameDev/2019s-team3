@@ -3,17 +3,46 @@
  
  public class HoldItems : MonoBehaviour {
  
-	public float throwSpeed = 10;
+	public float throwSpeed;
+	private float originalThrowSpeed;
 	public bool canHold = true;
 	public GameObject ball;
 	public Transform guide;
+	private bool charging = false;
+	private bool primed = false;
+	public float chargeRate = 1;
+	
+	void Start() {
+		originalThrowSpeed = throwSpeed;
+	}
  
 	void Update()
 	{
 		float distance;
-		if (Input.GetButtonDown("Grab") && !canHold) {
+		
+		// If we're currently holding an object
+		if (!canHold) {
+			if (Input.GetButtonDown("Grab")) {
+				charging = true;
+			}
+			// Increment throw speed
+			if (charging == true) {
+				if (throwSpeed < originalThrowSpeed * 4) {
+					throwSpeed = (throwSpeed + (chargeRate * Time.deltaTime));
+				}
+			}
+			// We let go, stop charging
+			if (Input.GetButtonUp("Grab") && charging) {
+				charging = false;
+				primed = true;
+			}
+		}
+				
+		// Throw the ball
+		if (!canHold && !charging && primed) {
 			Drop();
 			Debug.Log("Throwing " + ball);
+		// Pick up a ball
 		} else if (Input.GetButtonDown("Grab")) {
 			distance = Vector3.Distance(ball.transform.position, guide.transform.position);
 			Debug.Log("Attempting to pick up " + ball + ", distance = " + distance);
@@ -21,7 +50,6 @@
 				Pickup();
 			}
 		}
-  
 		if (!canHold && ball)
 			ball.transform.position = guide.position;       
    }
@@ -67,11 +95,14 @@
          ball.GetComponent<Rigidbody>().useGravity = true;
 		  
          // apply velocity on throwing
-         ball.GetComponent<Rigidbody>().velocity = guide.forward * throwSpeed;
+         ball.GetComponent<Rigidbody>().velocity = new Vector3(guide.forward.x * throwSpeed, guide.forward.y + throwSpeed/2 + 2, guide.forward.z * throwSpeed);
+		 Debug.Log(ball.GetComponent<Rigidbody>().velocity);
 		 
 		 // re-enable collisions
 		 ball.GetComponent<SphereCollider>().enabled = true;
          
 		 canHold = true;
+		 primed = false;
+		 throwSpeed = originalThrowSpeed;
      }
  }//class
