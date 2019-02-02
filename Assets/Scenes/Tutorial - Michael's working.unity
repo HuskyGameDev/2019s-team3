@@ -6226,6 +6226,7 @@ MonoBehaviour:
   - {fileID: 1251315645}
   unlit: {fileID: 2100000, guid: 412b30cbb82ec364bb899c9ee1a9ebac, type: 2}
   lit: {fileID: 2100000, guid: 86ed28d170148df41be9913be88ebb10, type: 2}
+  badInput: {fileID: 2100000, guid: e63dbf9387fd10e45b014392f4aed005, type: 2}
 --- !u!65 &497464812
 BoxCollider:
   m_ObjectHideFlags: 0
