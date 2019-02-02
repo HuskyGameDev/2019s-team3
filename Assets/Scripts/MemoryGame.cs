@@ -8,6 +8,7 @@ public class MemoryGame : MonoBehaviour {
     public GameObject[] objects = new GameObject[16];
     public Material unlit;
     public Material lit;
+    public Material badInput;
 
     /* Variables for keeping tabs of the game's general state */
     private float time;
@@ -28,6 +29,7 @@ public class MemoryGame : MonoBehaviour {
     private int inputsCount = 0;
     private int expectedInputs = 3;
     private int failures;
+    private bool redTiles;
 
     // Use this for initialization
     void Start() {
@@ -189,10 +191,19 @@ public class MemoryGame : MonoBehaviour {
                 {
                     gameManager.ShowDialog("Wow! I did better than you're doing! You know you can leave and come back for a different order, right?");
                 }
-                time = Time.realtimeSinceStartup;
-                state = State.display;
-                setTileMaterial(unlit);
-                inputsCount = 0;
+                if ((Time.realtimeSinceStartup - time) > delay)
+                {
+                    redTiles = false;
+                    time = Time.realtimeSinceStartup;
+                    state = State.display;
+                    setTileMaterial(unlit);
+                    inputsCount = 0;
+                }
+                else if(!redTiles)
+                {
+                    redTiles = true;
+                    setTileMaterial(badInput);
+                }
             }
             
         }
