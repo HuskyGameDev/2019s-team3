@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorial - Michael's working.unity
     guid: 8438e06ba5addd6498262b27ad67ffbf
+  - enabled: 1
+    path: Assets/Scenes/Maze.unity
+    guid: 28fa5710483dce04fb69185617241846
   m_configObjects: {}

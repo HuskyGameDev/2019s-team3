@@ -861,7 +861,7 @@ MonoBehaviour:
   width: 21
   height: 21
   scaleX: 1
-  scaleY: 7
+  scaleY: 9
   scaleZ: 1
   brick: {fileID: 2100000, guid: 159980d1abf1cae46a10abf378185f96, type: 2}
   MazeString: 
