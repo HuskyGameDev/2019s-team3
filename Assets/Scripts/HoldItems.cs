@@ -6,7 +6,7 @@
 	public float throwSpeed;
 	private float originalThrowSpeed;
 	public bool canHold = true;
-	public GameObject ball;
+	public GameObject holditem;
 	public Transform guide;
 	private bool charging = false;
 	private bool primed = false;
@@ -41,66 +41,57 @@
 		// Throw the ball
 		if (!canHold && !charging && primed) {
 			Drop();
-			Debug.Log("Throwing " + ball);
+			Debug.Log("Throwing " + holditem);
 		// Pick up a ball
 		} else if (Input.GetButtonDown("Grab")) {
-			distance = Vector3.Distance(ball.transform.position, guide.transform.position);
-			Debug.Log("Attempting to pick up " + ball + ", distance = " + distance);
+            //TODO: change this to hitscanning - needs to check distance and check object type
+			distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
+			Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
 			if (distance < 1.5f) {
 				Pickup();
 			}
 		}
-		if (!canHold && ball)
-			ball.transform.position = guide.position;       
+		if (!canHold && holditem)
+			holditem.transform.position = guide.position;       
    }
  
 	void OnTriggerEnter(Collider col)
 	{
 		if (col.gameObject.tag == "ball")
-			if (!ball) // if we don't have anything holding
-				ball = col.gameObject;
+			if (!holditem) // if we don't have anything holding
+				holditem = col.gameObject;
 	}
  
 	void OnTriggerExit(Collider col)
 	{
         if (col.gameObject.tag == "ball") {
 			if (canHold)
-				ball = null;
+				holditem = null;
 		}
 	}
  
 	private void Pickup()
 	{
-		if (!ball)
+		if (!holditem)
 			return;
  
          // set gravity to false while holding it
-         ball.GetComponent<Rigidbody>().useGravity = false;
+         holditem.GetComponent<Rigidbody>().useGravity = false;
 		 
          // re-position the ball on our guide object 
-         ball.transform.position = guide.position;
+         holditem.transform.position = guide.position;
 		 
 		 // Disable collisions
-		 ball.GetComponent<SphereCollider>().enabled = false;
+		 holditem.GetComponent<SphereCollider>().enabled = false;
  
          canHold = false;
      }
  
     private void Drop()
 	 {
-		 if (!ball)
+		 if (!holditem)
 			 return;
- 
-         // set our Gravity to true again.
-         ball.GetComponent<Rigidbody>().useGravity = true;
-		  
-         // apply velocity on throwing
-         ball.GetComponent<Rigidbody>().velocity = new Vector3(guide.forward.x * throwSpeed, guide.forward.y + throwSpeed/2 + 2, guide.forward.z * throwSpeed);
-		 Debug.Log(ball.GetComponent<Rigidbody>().velocity);
-		 
-		 // re-enable collisions
-		 ball.GetComponent<SphereCollider>().enabled = true;
-         
+
 		 canHold = true;
 		 primed = false;
 		 throwSpeed = originalThrowSpeed;

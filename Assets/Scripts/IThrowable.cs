@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IThrowable {
     void PickUp();
-    void Throw(float throwspeed);
+    void Throw(float throwspeed, Transform guide);
 }
