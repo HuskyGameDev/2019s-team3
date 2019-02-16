@@ -14,13 +14,20 @@
 	private bool charging = false;
 	private bool primed = false;
 	public float chargeRate = 1;
+	public RectTransform chargeBar;
+	public GameObject canvas;
 	
 	void Start() {
 		originalThrowSpeed = throwSpeed;
+		canvas.SetActive(true);
+		
 	}
  
 	void Update()
 	{
+		Debug.Log(throwSpeed);
+		chargeBar.localScale = new Vector3(throwSpeed - originalThrowSpeed, 0.09872f, 1f);
+		
 		// If we're currently holding an object
 		if (!canHold) {
 			if (Input.GetButtonDown("Grab")) {
