@@ -2,7 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class ShootingGalleryManager : MonoBehaviour {
+
+    private int points;
+    private const int pointsToWin = 10;
+
+    public void TargetHit()
+    {
+        points++;
+        Debug.Log("Target was hit, adding points");
+    }
 
 	// Use this for initialization
 	void Start () {
