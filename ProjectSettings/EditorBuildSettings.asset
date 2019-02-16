@@ -18,12 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Dungeon.unity
     guid: dd2fd67394c0acd479f21908b42bc12a
   - enabled: 1
-    path: Assets/Scenes/Tutorial - Michael's working.unity
+    path: Assets/Scenes/Level 1.unity
     guid: 8438e06ba5addd6498262b27ad67ffbf
   - enabled: 1
     path: Assets/Scenes/Maze.unity
     guid: 28fa5710483dce04fb69185617241846
-  - enabled: 1
-    path: Assets/Scenes/Tutorial - Michael's working 2.unity
-    guid: b595065ced5ce544d91d38f1bef5d48e
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

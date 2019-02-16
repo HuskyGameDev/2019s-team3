@@ -451,7 +451,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 10
   canHold: 1
-  ball: {fileID: 0}
   guide: {fileID: 1872823885}
   chargeRate: 1
 --- !u!143 &663192653
@@ -776,7 +775,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa557d55f68d204ea29aedc2c09b5de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: Tutorial - Micheal's working
+  nextScene: Level 1
 --- !u!65 &737590385
 BoxCollider:
   m_ObjectHideFlags: 0
