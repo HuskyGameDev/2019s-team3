@@ -80,10 +80,7 @@
                 holditem = col.gameObject;
                 distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
                 Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
-                if (distance < 1.5f)
-                {
-                    Pickup();
-                }
+                Pickup();
                 pickingUp = false;
             }
 	}
