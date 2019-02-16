@@ -6,8 +6,11 @@
 	public float throwSpeed;
 	private float originalThrowSpeed;
 	public bool canHold = true;
-	public GameObject holditem;
+	private GameObject holditem;
 	public Transform guide;
+    private bool pickingUp = false;
+    private const float pickingUpBuffer = 0.3f;
+    private float time;
 	private bool charging = false;
 	private bool primed = false;
 	public float chargeRate = 1;
@@ -18,8 +21,6 @@
  
 	void Update()
 	{
-		float distance;
-		
 		// If we're currently holding an object
 		if (!canHold) {
 			if (Input.GetButtonDown("Grab")) {
@@ -37,7 +38,7 @@
 				primed = true;
 			}
 		}
-				
+			
 		// Throw the ball
 		if (!canHold && !charging && primed) {
 			Drop();
@@ -45,45 +46,61 @@
 		// Pick up a ball
 		} else if (Input.GetButtonDown("Grab")) {
             //TODO: change this to hitscanning - needs to check distance and check object type
-			distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
-			Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
-			if (distance < 1.5f) {
-				Pickup();
-			}
+            if (canHold)
+            {
+                Debug.Log("Enabling item pick up");
+                pickingUp = true;
+                time = Time.realtimeSinceStartup;
+            }
 		}
+        if(pickingUp && !Input.GetButtonDown("Grab"))
+        {
+            if (pickingUpBuffer < Time.realtimeSinceStartup - time)
+            {
+                Debug.Log("Disabling item pickup");
+                pickingUp = false;
+            }
+        }
 		if (!canHold && holditem)
 			holditem.transform.position = guide.position;       
    }
- 
-	void OnTriggerEnter(Collider col)
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Object is throwable: " + other.gameObject.GetComponent<Throwable>());
+    }
+
+    void OnTriggerStay(Collider col)
 	{
-		if (col.gameObject.tag == "ball")
-			if (!holditem) // if we don't have anything holding
-				holditem = col.gameObject;
+
+        if (pickingUp && col.gameObject.GetComponent<Throwable>() != null)
+            if (canHold)
+            {// if we don't have anything holding
+                float distance;
+                holditem = col.gameObject;
+                distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
+                Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
+                if (distance < 1.5f)
+                {
+                    Pickup();
+                }
+                pickingUp = false;
+            }
 	}
- 
+ /*
 	void OnTriggerExit(Collider col)
 	{
-        if (col.gameObject.tag == "ball") {
-			if (canHold)
+        if (col.gameObject.GetComponent<Throwable>()) {
+			if (!canHold)
 				holditem = null;
 		}
-	}
+	}*/
  
 	private void Pickup()
 	{
 		if (!holditem)
 			return;
- 
-         // set gravity to false while holding it
-         holditem.GetComponent<Rigidbody>().useGravity = false;
-		 
-         // re-position the ball on our guide object 
-         holditem.transform.position = guide.position;
-		 
-		 // Disable collisions
-		 holditem.GetComponent<SphereCollider>().enabled = false;
- 
+        holditem.GetComponent<Throwable>().PickUp(guide);
          canHold = false;
      }
  
@@ -91,9 +108,10 @@
 	 {
 		 if (!holditem)
 			 return;
-
-		 canHold = true;
+         holditem.GetComponent<Throwable>().Throw(throwSpeed, guide);
+         canHold = true;
 		 primed = false;
 		 throwSpeed = originalThrowSpeed;
+         holditem = null;
      }
  }//class
