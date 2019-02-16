@@ -6,8 +6,11 @@
 	public float throwSpeed;
 	private float originalThrowSpeed;
 	public bool canHold = true;
-	public GameObject ball;
+	private GameObject holditem;
 	public Transform guide;
+    private bool pickingUp = false;
+    private const float pickingUpBuffer = 0.3f;
+    private float time;
 	private bool charging = false;
 	private bool primed = false;
 	public float chargeRate = 1;
@@ -18,8 +21,6 @@
  
 	void Update()
 	{
-		float distance;
-		
 		// If we're currently holding an object
 		if (!canHold) {
 			if (Input.GetButtonDown("Grab")) {
@@ -37,72 +38,80 @@
 				primed = true;
 			}
 		}
-				
+			
 		// Throw the ball
 		if (!canHold && !charging && primed) {
 			Drop();
-			Debug.Log("Throwing " + ball);
+			Debug.Log("Throwing " + holditem);
 		// Pick up a ball
 		} else if (Input.GetButtonDown("Grab")) {
-			distance = Vector3.Distance(ball.transform.position, guide.transform.position);
-			Debug.Log("Attempting to pick up " + ball + ", distance = " + distance);
-			if (distance < 1.5f) {
-				Pickup();
-			}
+            //TODO: change this to hitscanning - needs to check distance and check object type
+            if (canHold)
+            {
+                Debug.Log("Enabling item pick up");
+                pickingUp = true;
+                time = Time.realtimeSinceStartup;
+            }
 		}
-		if (!canHold && ball)
-			ball.transform.position = guide.position;       
+        if(pickingUp && !Input.GetButtonDown("Grab"))
+        {
+            if (pickingUpBuffer < Time.realtimeSinceStartup - time)
+            {
+                Debug.Log("Disabling item pickup");
+                pickingUp = false;
+            }
+        }
+		if (!canHold && holditem)
+			holditem.transform.position = guide.position;       
    }
- 
-	void OnTriggerEnter(Collider col)
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("Object is throwable: " + other.gameObject.GetComponent<Throwable>());
+    }
+
+    void OnTriggerStay(Collider col)
 	{
-		if (col.gameObject.tag == "ball")
-			if (!ball) // if we don't have anything holding
-				ball = col.gameObject;
+
+        if (pickingUp && col.gameObject.GetComponent<Throwable>() != null)
+            if (canHold)
+            {// if we don't have anything holding
+                float distance;
+                holditem = col.gameObject;
+                distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
+                Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
+                if (distance < 1.5f)
+                {
+                    Pickup();
+                }
+                pickingUp = false;
+            }
 	}
- 
+ /*
 	void OnTriggerExit(Collider col)
 	{
-        if (col.gameObject.tag == "ball") {
-			if (canHold)
-				ball = null;
+        if (col.gameObject.GetComponent<Throwable>()) {
+			if (!canHold)
+				holditem = null;
 		}
-	}
+	}*/
  
 	private void Pickup()
 	{
-		if (!ball)
+		if (!holditem)
 			return;
- 
-         // set gravity to false while holding it
-         ball.GetComponent<Rigidbody>().useGravity = false;
-		 
-         // re-position the ball on our guide object 
-         ball.transform.position = guide.position;
-		 
-		 // Disable collisions
-		 ball.GetComponent<SphereCollider>().enabled = false;
- 
+        holditem.GetComponent<Throwable>().PickUp(guide);
          canHold = false;
      }
  
     private void Drop()
 	 {
-		 if (!ball)
+		 if (!holditem)
 			 return;
- 
-         // set our Gravity to true again.
-         ball.GetComponent<Rigidbody>().useGravity = true;
-		  
-         // apply velocity on throwing
-         ball.GetComponent<Rigidbody>().velocity = new Vector3(guide.forward.x * throwSpeed, guide.forward.y + throwSpeed/2 + 2, guide.forward.z * throwSpeed);
-		 Debug.Log(ball.GetComponent<Rigidbody>().velocity);
-		 
-		 // re-enable collisions
-		 ball.GetComponent<SphereCollider>().enabled = true;
-         
-		 canHold = true;
+         holditem.GetComponent<Throwable>().Throw(throwSpeed, guide);
+         canHold = true;
 		 primed = false;
 		 throwSpeed = originalThrowSpeed;
+         holditem = null;
      }
  }//class
