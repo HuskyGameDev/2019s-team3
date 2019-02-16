@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
     private string remainingDiaglogText = "";
     private bool dialogTextRendering = false;
+    private Queue<string> dialogQueue;
+    private DateTime lastClearRequestTime;
 
     // Use this for initialization
     void Start () {
@@ -40,12 +43,17 @@ public class GameManager : MonoBehaviour {
         DialogBackground.SetActive(false);
         DialogHead.SetActive(false);
         DialogText.gameObject.SetActive(false);
+
+        dialogQueue = new Queue<string>();
     }
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (!dialogTextRendering && dialogQueue.Count > 0)
+        {
+            DisplayDialog(dialogQueue.Dequeue());
+        }
+    }
 	
 	public void SetOneUps(int oneups) {
 		current1Ups = oneups;
@@ -202,8 +210,14 @@ public class GameManager : MonoBehaviour {
     {
         if (dialogTextRendering)
         {
+            dialogQueue.Enqueue(text);
             return;
         }
+        DisplayDialog(text);
+    }
+
+    private void DisplayDialog(string text)
+    {
         dialogTextRendering = true;
         remainingDiaglogText = text;
 
@@ -224,22 +238,28 @@ public class GameManager : MonoBehaviour {
     {
         DialogText.text += remainingDiaglogText.Substring(0, 1);
         remainingDiaglogText = remainingDiaglogText.Substring(1);
-
-        Debug.Log(remainingDiaglogText);
-
+        
         if (remainingDiaglogText.Equals(""))
         {
             dialogTextRendering = false;
             CancelInvoke("RenderDialogText");
 
+            lastClearRequestTime = DateTime.Now;
             Invoke("ClearDialog", DialogTextShowDuration);
         }
     }
 
     private void ClearDialog()
     {
-        DialogBackground.SetActive(false);
-        DialogHead.SetActive(false);
-        DialogText.gameObject.SetActive(false);
+        // don't clear dialog if there is another dialog text currently rendering,
+        // or if it hasn't been long enough. This case may arise if something causes the
+        // text show duration for a previous dialog to be interrupted by a new dialog.
+        if ((DateTime.Now - lastClearRequestTime).TotalSeconds > DialogTextShowDuration - .1
+            && !dialogTextRendering)
+        {
+            DialogBackground.SetActive(false);
+            DialogHead.SetActive(false);
+            DialogText.gameObject.SetActive(false);
+        }
     }
 }
