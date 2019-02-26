@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\dstockero\Documents\2019s-team3\Team 3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dstockero\Documents\2019s-team3\Team 3_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dstockero\Documents\2019s-team3\Team 3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\dstockero\Documents\2019s-team3\Team 3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -23,8 +23,22 @@
 				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump"/>
 				<Event Id="2397454474" Name="JungleAmbience" ObjectPath="\Events\Default Work Unit\JungleAmbience"/>
 				<Event Id="3029536662" Name="Music_Jungle" ObjectPath="\Events\Default Work Unit\Music_Jungle"/>
+				<Event Id="1386647150" Name="Reggie_Hurt" ObjectPath="\Events\Default Work Unit\Reggie_Hurt"/>
+				<Event Id="1971301610" Name="Reggie_Success" ObjectPath="\Events\Default Work Unit\Reggie_Success"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="21405669" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_77B98C78.wem</Path>
+				</File>
+				<File Id="76176526" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_3A783E5A.wem</Path>
+				</File>
+				<File Id="156921658" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_BE072720.wem</Path>
+				</File>
 				<File Id="197021754" Language="SFX">
 					<ShortName>Dirt Footsteps#01.wav</ShortName>
 					<Path>SFX\Dirt Footsteps#01_C99955B4.wem</Path>
@@ -32,6 +46,10 @@
 				<File Id="236262193" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
 					<Path>SFX\Grass Footsteps#01_F28DD493.wem</Path>
+				</File>
+				<File Id="273604478" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_0C613CBB.wem</Path>
 				</File>
 				<File Id="385288777" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
@@ -41,13 +59,21 @@
 					<ShortName>Button Ring.wav</ShortName>
 					<Path>SFX\Button Ring_821E12E1.wem</Path>
 				</File>
+				<File Id="517886080" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_7D7911F9.wem</Path>
+				</File>
+				<File Id="585963247" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_202F53C8.wem</Path>
+				</File>
 				<File Id="615168643" Language="SFX">
 					<ShortName>TOTS_JungleMusic_V2.wav</ShortName>
 					<Path>SFX\TOTS_JungleMusic_V2_F17FB28C.wem</Path>
 				</File>
 				<File Id="630086569" Language="SFX">
 					<ShortName>StickSwooshTake01.wav</ShortName>
-					<Path>SFX\StickSwooshTake01_FC5BED5D.wem</Path>
+					<Path>SFX\StickSwooshTake01_410E4523.wem</Path>
 				</File>
 				<File Id="652019439" Language="SFX">
 					<ShortName>Coin Pickup_V1.wav</ShortName>
