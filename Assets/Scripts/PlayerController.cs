@@ -11,7 +11,10 @@ public class PlayerController : MonoBehaviour
     private float moveSpeed = 5f;
     public float jumpForce = 15f;
     public float gravityScale = 5f;
-	private Vector3 moveDirection;
+    public float knockBackForce;
+    public float knockBackTime;
+    public float knockBackCounter;
+    private Vector3 moveDirection;
     private bool hasDoubleJumped = false;
     private bool isCarrying = false;
     private long lastFootStepSoundTime = -1;
@@ -32,41 +35,47 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        // set movement
-        //NOTE: Use GetAxisRaw to remove "sliding" after movement
-        float prevY = moveDirection.y; // store y value temp
-        moveDirection = (transform.forward * Input.GetAxis("Vertical")) +
-                (transform.right * Input.GetAxis("Horizontal"));
-
-        // let player run
-        bool running = Input.GetButton("Run");
-        if (running)
+        if (knockBackCounter <= 0)
         {
-            moveSpeed = 2 * baseMoveSpeed;
+            // set movement
+            //NOTE: Use GetAxisRaw to remove "sliding" after movement
+            float prevY = moveDirection.y; // store y value temp
+            moveDirection = (transform.forward * Input.GetAxis("Vertical")) +
+                    (transform.right * Input.GetAxis("Horizontal"));
+
+            // let player run
+            bool running = Input.GetButton("Run");
+            if (running)
+            {
+                moveSpeed = 2 * baseMoveSpeed;
+            }
+            else
+            {
+                moveSpeed = baseMoveSpeed;
+            }
+
+            moveDirection = moveDirection * moveSpeed;
+            moveDirection.y = prevY;
+
+            // jump logic
+            if (controller.isGrounded)
+            {
+                moveDirection.y = 0f;
+                hasDoubleJumped = false;
+            }
+            if (Input.GetButtonDown("Jump") && (controller.isGrounded || !hasDoubleJumped))
+            {
+                if (!controller.isGrounded)
+                {
+                    hasDoubleJumped = true;
+                }
+                moveDirection.y = jumpForce;
+                AkSoundEngine.PostEvent("Jump", this.gameObject);
+            }
         }
         else
         {
-            moveSpeed = baseMoveSpeed;
-        }
-
-        moveDirection = moveDirection * moveSpeed;
-        moveDirection.y = prevY;
-
-        // jump logic
-        if (controller.isGrounded)
-        {
-            moveDirection.y = 0f;
-            hasDoubleJumped = false;
-        }
-        if (Input.GetButtonDown("Jump") && (controller.isGrounded || !hasDoubleJumped))
-        {
-            if (!controller.isGrounded)
-            {
-                hasDoubleJumped = true;
-            }
-            moveDirection.y = jumpForce;
-            AkSoundEngine.PostEvent("Jump", this.gameObject);
+            knockBackCounter -= Time.deltaTime;
         }
 
         // apply gravity
@@ -105,5 +114,11 @@ public class PlayerController : MonoBehaviour
         //{
         //    other.gameObject.SetActive(false);
         //}
+    }
+
+    public void Knockback(Vector3 direction)
+    {
+        knockBackCounter = knockBackTime;
+        moveDirection = direction * knockBackForce;
     }
 }
