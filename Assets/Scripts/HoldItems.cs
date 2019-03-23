@@ -15,6 +15,8 @@
 	private bool primed = false;
 	public float chargeRate = 1;
 	
+	public GameObject panel;
+	
 	void Start() {
 		originalThrowSpeed = throwSpeed;
 	}
@@ -30,12 +32,14 @@
 			if (charging == true) {
 				if (throwSpeed < originalThrowSpeed * 4) {
 					throwSpeed = (throwSpeed + (chargeRate * Time.deltaTime));
+					panel.transform.localScale = new Vector3(panel.transform.localScale.x + 0.005f, panel.transform.localScale.y, panel.transform.localScale.z);
 				}
 			}
 			// We let go, stop charging
 			if (Input.GetButtonUp("Grab") && charging) {
 				charging = false;
 				primed = true;
+				panel.transform.localScale = new Vector3(0, 0.053373f, 1f);
 			}
 		}
 			
