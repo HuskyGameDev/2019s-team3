@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour {
     private bool dialogTextRendering = false;
     private Queue<string> dialogQueue;
     private DateTime lastClearRequestTime;
+	
+	private bool isImmune = false;
 
     // Use this for initialization
     void Start () {
@@ -54,6 +56,14 @@ public class GameManager : MonoBehaviour {
             DisplayDialog(dialogQueue.Dequeue());
         }
     }
+	
+	public void SetImmunity(bool i) {
+		isImmune = i;
+	}
+	
+	public bool GetImmunity() {
+		return isImmune;
+	}
 	
 	public void SetOneUps(int oneups) {
 		current1Ups = oneups;
@@ -100,7 +110,9 @@ public class GameManager : MonoBehaviour {
 
     public void RemoveHearts(int hearts)
     {
-        SetHearts(currentHearts - hearts);
+        if(!isImmune) {
+			SetHearts(currentHearts - hearts);
+		}
     }
 
     public void AddHearts(int hearts)

@@ -12161,6 +12161,8 @@ GameObject:
   - component: {fileID: 758620000}
   - component: {fileID: 758620009}
   - component: {fileID: 758620008}
+  - component: {fileID: 758620006}
+  - component: {fileID: 758619999}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -12168,6 +12170,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &758619999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 758619998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82e58722c26619d4588e34e0b7d9cd15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minSurviveFall: 1.5
 --- !u!143 &758620000
 CharacterController:
   m_ObjectHideFlags: 0
@@ -12274,6 +12288,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 282
   m_LocalEulerAnglesHint: {x: 0, y: 6.4, z: 0}
+--- !u!114 &758620006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 758619998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e97e9ed118f6546990a5b5b389d541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 758620005}
+  respawns:
+  - {x: 260.8, y: -4.11, z: -55.1}
+  - {x: 225.8914, y: 1.636558, z: 56.38555}
+  - {x: 441.3168, y: 4.957794, z: 86.43608}
+  - {x: 433.5929, y: 1.098311, z: 260.7972}
+  - {x: 441.0302, y: 10.76566, z: 376.9591}
+  immuneTime: 2
 --- !u!114 &758620008
 MonoBehaviour:
   m_ObjectHideFlags: 0

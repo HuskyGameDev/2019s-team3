@@ -159,6 +159,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Reggie_Hurt" ID="{C2EBF918-AFC6-47F3-8425-BBDCB08056FE}">
+					<ChildrenList>
+						<Action Name="" ID="{0F877283-3368-4A32-A23C-29C11C317133}" ShortID="382339992">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Hurt" ID="{4D4F5FC8-2219-4B23-82DB-4E9F658BDC6F}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reggie_Success" ID="{0E049DBC-1B6D-4846-9D73-C043415AA3D4}">
+					<ChildrenList>
+						<Action Name="" ID="{314BD923-6ED9-4F76-8190-82E16A33E838}" ShortID="785098608">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory" ID="{B1578216-7485-419B-B6FB-F2587B42874A}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
