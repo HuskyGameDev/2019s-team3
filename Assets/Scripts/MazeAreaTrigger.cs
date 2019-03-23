@@ -8,7 +8,7 @@ public class MazeAreaTrigger : MonoBehaviour {
 	private GameManager gameManager;
 	// Use this for initialization
 	void Start () {
-		
+		gameManager = FindObjectOfType<GameManager>();
 	}
 	
 	// Update is called once per frame
@@ -28,4 +28,14 @@ public class MazeAreaTrigger : MonoBehaviour {
 			break;
 	}
 }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        dialogStep = 0;
+    }
+
+    public void OnTriggerExit(Collider other)
+    {
+        dialogStep = 5;
+    }
 }
