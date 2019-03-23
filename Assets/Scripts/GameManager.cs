@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour {
     public GameObject DialogHead;
     public Text DialogText;
 
+    private PlayerController player;
+
     private int heart1BlinkState = 0;
     private int heart2BlinkState = 0;
     private int heart3BlinkState = 0;
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour {
         DialogText.gameObject.SetActive(false);
 
         dialogQueue = new Queue<string>();
+        player = FindObjectOfType<PlayerController>();
     }
 	
 	// Update is called once per frame
@@ -108,10 +111,10 @@ public class GameManager : MonoBehaviour {
         return currentCoins;
     }
 
-    public void RemoveHearts(int hearts)
+    public void RemoveHearts(int hearts, Vector3 direction = new Vector3())
     {
         if(!isImmune) {
-			SetHearts(currentHearts - hearts);
+			SetHearts(currentHearts - hearts, direction);
 		}
     }
 
@@ -120,7 +123,7 @@ public class GameManager : MonoBehaviour {
         SetHearts(currentHearts + hearts);
     }
 
-    public void SetHearts(int hearts)
+    public void SetHearts(int hearts, Vector3 direction = new Vector3())
     {
         int previousHearts = currentHearts;
         currentHearts = hearts;
@@ -132,6 +135,14 @@ public class GameManager : MonoBehaviour {
         }
         else if (previousHearts > currentHearts)
         {
+            if (currentHearts == 0) // if the hearts is 0, then the player died so don't knock them back on respawn
+            {
+                direction = new Vector3();
+            }
+            if (direction.magnitude != 0) // apply knockback if it is present
+            {
+                player.Knockback(direction);
+            }
             if (currentHearts < 3 && previousHearts >= 3)
             {
                 StartBlink(3);
