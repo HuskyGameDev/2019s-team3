@@ -26,6 +26,7 @@ public class Throwable : MonoBehaviour {
             guide.forward.y + throwspeed / 2 + 2, guide.forward.z * throwspeed);
         Debug.Log("Velocity after throwing: " + this.GetComponent<Rigidbody>().velocity);
 
+        
         // re-enable collisions
         this.GetComponent<Collider>().enabled = true;
     }

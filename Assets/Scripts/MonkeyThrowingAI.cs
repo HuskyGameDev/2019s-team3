@@ -3,30 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+/*
+ * This script controls throwing/instantiating new rocks
+ */
+
 public class MonkeyThrowingAI : MonoBehaviour
 {
 
+    const float throwSpeed = 100;
     Transform player;
-    NavMeshAgent nav;
-    Transform thisAI;
+    public Transform guide;
     bool isClose;
+    const float newRockDelay = 3;
+    const float throwDelay = 1;
+    float time;
     public Throwable projectile;
+    bool holding = false;
 
     // Use this for initialization
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        nav = GetComponent<NavMeshAgent>();
-        thisAI = GetComponent<Transform>();
-        projectile.PickUp(thisAI);
+        time = Time.realtimeSinceStartup;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(thisAI.position, player.position) < 10)
+        if ((Time.realtimeSinceStartup - time) > newRockDelay && !holding)
         {
-
+            
+            holding = true;
+            Object.Instantiate<Throwable>(projectile, guide.position, guide.rotation);
+            projectile.PickUp(guide);
+            Debug.Log(guide.position);
+            time = Time.realtimeSinceStartup;
+        }
+        else if ((Vector3.Distance(guide.position, player.position) < 10) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
+        {
+            Debug.Log("guide forward: " + guide.forward);
             shootPlayer();
         }
         else
@@ -37,12 +52,8 @@ public class MonkeyThrowingAI : MonoBehaviour
 
     void shootPlayer()
     {
-        NavMeshHit hit;
-        if (nav.Raycast(player.position, out hit))
-        {
-            Debug.Log("player is targetable");
-
-        }
-
+        projectile.Throw(throwSpeed, guide);
+        holding = false;
+        time = Time.realtimeSinceStartup;
     }
 }
