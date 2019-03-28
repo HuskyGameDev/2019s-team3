@@ -63,12 +63,14 @@ public class Throwable : MonoBehaviour {
             }
             else if(collision.gameObject.tag == "Player")
             {
+                //throwable has hit the player
                 Vector3 hitDirection = collision.transform.position - transform.position;
                 hitDirection = hitDirection.normalized;
                 FindObjectOfType<GameManager>().RemoveHearts(1, hitDirection);
             }
-            if( (actor = collision.gameObject.GetComponent<Actor>()) != null)
+            else if( (actor = collision.gameObject.GetComponent<Actor>()) != null)
             {
+                //throwable has hit an enemy
                 actor.Damage();
             }
 
