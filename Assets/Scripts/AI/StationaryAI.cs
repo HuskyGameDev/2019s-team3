@@ -7,7 +7,7 @@ using UnityEngine.AI;
  * This script controls targetting behavior
  */
 
-public class MonkeyAI : MonoBehaviour {
+public class StationaryAI : MonoBehaviour {
 
     Transform player;
     Transform thisAI;

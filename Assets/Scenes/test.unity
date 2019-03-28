@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 494232042}
-  projectile: {fileID: 114743366324509798, guid: edb26cf6f81bde04f8e33cbcac8e0081,
+  projectile: {fileID: 114534517881480470, guid: edb26cf6f81bde04f8e33cbcac8e0081,
     type: 2}
 --- !u!65 &137795839
 BoxCollider:
@@ -390,6 +390,9 @@ MonoBehaviour:
   baseMoveSpeed: 5
   jumpForce: 15
   gravityScale: 5
+  knockBackForce: 0
+  knockBackTime: 0
+  knockBackCounter: 0
   FootStepFrequency: 1100
   pivot: {fileID: 458236716}
   rotateSpeed: 10
@@ -792,10 +795,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fa5c59143d5244d8d4794c9656bfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwSpeed: 10
+  throwSpeed: 20
   canHold: 1
   guide: {fileID: 1595467156}
   chargeRate: 1
+  panel: {fileID: 535838842}
 --- !u!1001 &352372038
 Prefab:
   m_ObjectHideFlags: 0
@@ -1464,6 +1468,11 @@ Transform:
   m_Father: {fileID: 1429205288}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &535838842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1699857788810474, guid: 737c6393f86446b44968cd9c48f74fd6,
+    type: 2}
+  m_PrefabInternal: {fileID: 657149936}
 --- !u!1001 &550710365
 Prefab:
   m_ObjectHideFlags: 0

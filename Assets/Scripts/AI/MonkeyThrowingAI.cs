@@ -10,7 +10,7 @@ using UnityEngine.AI;
 public class MonkeyThrowingAI : MonoBehaviour
 {
 
-    const float throwSpeed = 100;
+    const float throwSpeed = 20;
     Transform player;
     public Transform guide;
     bool isClose;
@@ -19,6 +19,7 @@ public class MonkeyThrowingAI : MonoBehaviour
     float time;
     public Throwable projectile;
     bool holding = false;
+    Throwable currentRock;
 
     // Use this for initialization
     void Start()
@@ -34,7 +35,7 @@ public class MonkeyThrowingAI : MonoBehaviour
         {
             
             holding = true;
-            Object.Instantiate<Throwable>(projectile, guide.position, guide.rotation);
+            currentRock = Instantiate(projectile, guide, true);
             projectile.PickUp(guide);
             Debug.Log(guide.position);
             time = Time.realtimeSinceStartup;
@@ -52,7 +53,8 @@ public class MonkeyThrowingAI : MonoBehaviour
 
     void shootPlayer()
     {
-        projectile.Throw(throwSpeed, guide);
+        guide.DetachChildren();
+        currentRock.Throw(throwSpeed, guide);
         holding = false;
         time = Time.realtimeSinceStartup;
     }
