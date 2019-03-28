@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.AI;
 
-public class WanderingAI : MonoBehaviour
+public class WanderingAI : Actor
 {
 
     public float wanderRadius;
@@ -68,5 +68,15 @@ public class WanderingAI : MonoBehaviour
             hitDirection = hitDirection.normalized;
             gameManager.RemoveHearts(1, hitDirection);
         }
+    }
+
+    public override void Damage()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public override void Die()
+    {
+        throw new System.NotImplementedException();
     }
 }

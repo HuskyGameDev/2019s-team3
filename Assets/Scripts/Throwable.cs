@@ -6,7 +6,7 @@ public class Throwable : MonoBehaviour {
 
     bool live = false; // gameobject is in motion and should damage actors that it collides with
 
-    public void PickUp(Transform guide)
+    public virtual void PickUp(Transform guide)
     {
         live = false;
         // set gravity to false while holding it
@@ -19,7 +19,7 @@ public class Throwable : MonoBehaviour {
         this.GetComponent<Collider>().enabled = false;
     }
 
-    public void Throw(float throwspeed, Transform guide)
+    public virtual void Throw(float throwspeed, Transform guide)
     {
         // re-enable collisions
         this.GetComponent<Collider>().enabled = true;
@@ -53,8 +53,24 @@ public class Throwable : MonoBehaviour {
     {
         if(live)
         {
-            //object should try to damage an actor
-            Debug.Log("throwable hit an object");
+            //object should check if it hit the ground, 
+            //otherwise it should try to damage the player/actor it hit
+            Actor actor;
+            if (collision.gameObject.name == "Terrain")
+            {
+                live = false;
+                Debug.Log("throwable hit the ground");
+            }
+            else if(collision.gameObject.tag == "Player")
+            {
+                Vector3 hitDirection = collision.transform.position - transform.position;
+                hitDirection = hitDirection.normalized;
+                FindObjectOfType<GameManager>().RemoveHearts(1, hitDirection);
+            }
+            if( (actor = collision.gameObject.GetComponent<Actor>()) != null)
+            {
+                actor.Damage();
+            }
 
         }
     }
