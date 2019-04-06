@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class ShootingGalleryManager : MonoBehaviour {
 
+    public GalleryDoor westDoor;
+    public GalleryDoor eastDoor;
+
     private int points;
-    private const int pointsToWin = 10;
+    private const int pointsToWin = 3;
+    private const int stage2Points = 1;
 
     public void TargetHit()
     {
         points++;
+        UpdateStage();
         Debug.Log("Target was hit, adding points");
     }
 
@@ -22,4 +27,13 @@ public class ShootingGalleryManager : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void UpdateStage()
+    {
+        if(points == stage2Points)
+        {
+            westDoor.Toggle();
+            eastDoor.Toggle();
+        }
+    }
 }

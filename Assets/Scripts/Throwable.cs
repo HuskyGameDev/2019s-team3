@@ -7,7 +7,7 @@ public class Throwable : MonoBehaviour {
     bool live = false; // gameobject is in motion and should damage actors that it collides with
     bool playerThrown;
 
-    public virtual void PickUp(Transform guide, bool playerThrown)
+    public virtual bool PickUp(Transform guide, bool playerThrown)
     {
         this.playerThrown = playerThrown;
         live = false;
@@ -19,6 +19,8 @@ public class Throwable : MonoBehaviour {
 
         // Disable collisions
         this.GetComponent<Collider>().enabled = false;
+
+        return true;
     }
 
     public virtual void Throw(float throwspeed, Transform guide)
