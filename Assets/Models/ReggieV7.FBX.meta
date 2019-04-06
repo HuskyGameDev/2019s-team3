@@ -1,0 +1,232 @@
+fileFormatVersion: 2
+guid: 41b6ec0ca6ff5e8498938e8e64556125
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Capsule001
+    100002: CAT
+    100004: CATRigHub001
+    100006: CATRigHub002
+    100008: CATRigHub003
+    100010: CATRigLArm1
+    100012: CATRigLArm2
+    100014: CATRigLArmCollarbone
+    100016: CATRigLArmPalm
+    100018: CATRigLLeg1
+    100020: CATRigLLeg2
+    100022: CATRigLLegAnkle
+    100024: CATRigLLegDigit11
+    100026: CATRigLLegDigit12
+    100028: CATRigLLegPlatform
+    100030: CATRigRArm1
+    100032: CATRigRArm2
+    100034: CATRigRArmCollarbone
+    100036: CATRigRArmPalm
+    100038: CATRigRLeg1
+    100040: CATRigRLeg2
+    100042: CATRigRLegAnkle
+    100044: CATRigRLegDigit11
+    100046: CATRigRLegDigit12
+    100048: CATRigRLegPlatform
+    100050: CATRigSpine
+    100052: CATRigSpine1
+    100054: CATRigSpine2
+    100056: Character001
+    100058: Cylinder001
+    100060: Cylinder002
+    100062: Head
+    100064: LeftFoot
+    100066: LeftLeg
+    100068: Reggie
+    100070: //RootNode
+    100072: RightFoot
+    100074: RightLeg
+    100076: Sphere003
+    100078: Sphere006
+    100080: Sphere007
+    100082: Sphere008
+    100084: Torso
+    400000: Capsule001
+    400002: CAT
+    400004: CATRigHub001
+    400006: CATRigHub002
+    400008: CATRigHub003
+    400010: CATRigLArm1
+    400012: CATRigLArm2
+    400014: CATRigLArmCollarbone
+    400016: CATRigLArmPalm
+    400018: CATRigLLeg1
+    400020: CATRigLLeg2
+    400022: CATRigLLegAnkle
+    400024: CATRigLLegDigit11
+    400026: CATRigLLegDigit12
+    400028: CATRigLLegPlatform
+    400030: CATRigRArm1
+    400032: CATRigRArm2
+    400034: CATRigRArmCollarbone
+    400036: CATRigRArmPalm
+    400038: CATRigRLeg1
+    400040: CATRigRLeg2
+    400042: CATRigRLegAnkle
+    400044: CATRigRLegDigit11
+    400046: CATRigRLegDigit12
+    400048: CATRigRLegPlatform
+    400050: CATRigSpine
+    400052: CATRigSpine1
+    400054: CATRigSpine2
+    400056: Character001
+    400058: Cylinder001
+    400060: Cylinder002
+    400062: Head
+    400064: LeftFoot
+    400066: LeftLeg
+    400068: Reggie
+    400070: //RootNode
+    400072: RightFoot
+    400074: RightLeg
+    400076: Sphere003
+    400078: Sphere006
+    400080: Sphere007
+    400082: Sphere008
+    400084: Torso
+    2100000: 'Material #4'
+    2100002: No Name
+    2100004: 'Material #5'
+    4300000: Cylinder001
+    4300002: Cylinder002
+    4300004: Head
+    4300006: Torso
+    4300008: LeftLeg
+    4300010: LeftFoot
+    4300012: RightLeg
+    4300014: RightFoot
+    4300016: Sphere007
+    4300018: Sphere008
+    4300020: Sphere003
+    4300022: Sphere006
+    4300024: Capsule001
+    7400000: Take 001
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: Capsule001
+    13700002: Cylinder001
+    13700004: Cylinder002
+    13700006: Head
+    13700008: LeftFoot
+    13700010: LeftLeg
+    13700012: RightFoot
+    13700014: RightLeg
+    13700016: Sphere003
+    13700018: Sphere006
+    13700020: Sphere007
+    13700022: Sphere008
+    13700024: Torso
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #4'
+    second: {fileID: 2100000, guid: 37a2c2eb7b03d9945bfd09c202bfbe3e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #5'
+    second: {fileID: 2100000, guid: aa9d6b5cde243504a8454b2b08029a9a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 793e3097a0c24cc42a5994c8f4982793, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: UoQDJ
+    second: {fileID: 2800000, guid: 589f89f571d138c489808f870b4d8c3e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tiger-stripes-clipart-1
+    second: {fileID: 2800000, guid: c5e72b2ee8b602f46aee2881851d5fd9, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.0254
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
