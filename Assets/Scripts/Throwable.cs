@@ -53,7 +53,7 @@ public class Throwable : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(live)
+        if(live && collision.gameObject != thrower)
         {
             //object should check if it hit the ground, 
             //otherwise it should try to damage the player/actor it hit
@@ -62,10 +62,6 @@ public class Throwable : MonoBehaviour {
             {
                 live = false;
                 Debug.Log("throwable hit the ground");
-            }
-            else if (collision.gameObject.name == thrower.name)
-            {
-                return;
             }
             else if(collision.gameObject.tag == "Player")
             {
