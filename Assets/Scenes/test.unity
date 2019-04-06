@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   guide: {fileID: 494232042}
+  thisMonkey: {fileID: 1429205282}
   projectile: {fileID: 114534517881480470, guid: edb26cf6f81bde04f8e33cbcac8e0081,
     type: 2}
 --- !u!65 &137795839
@@ -797,6 +798,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 20
   canHold: 1
+  playerCollider: {fileID: 0}
   guide: {fileID: 1595467156}
   chargeRate: 1
   panel: {fileID: 535838842}
@@ -2008,7 +2010,7 @@ Prefab:
     - target: {fileID: 224755608143995700, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 224255622030758686, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
@@ -2018,17 +2020,17 @@ Prefab:
     - target: {fileID: 224931070747207970, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 224072962337055716, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 224176614193647110, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 224053675825945570, guid: 737c6393f86446b44968cd9c48f74fd6,
         type: 2}
