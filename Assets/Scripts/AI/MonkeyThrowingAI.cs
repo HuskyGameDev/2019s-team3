@@ -27,6 +27,7 @@ public class MonkeyThrowingAI : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         time = Time.realtimeSinceStartup;
+        Debug.Log("monkey has tag " + tag);
     }
 
     // Update is called once per frame
@@ -37,7 +38,7 @@ public class MonkeyThrowingAI : MonoBehaviour
             
             holding = true;
             currentRock = Instantiate(projectile, guide, true);
-            projectile.PickUp(guide, thisMonkey);
+            projectile.PickUp(guide, false);
             Debug.Log(guide.position);
             time = Time.realtimeSinceStartup;
         }

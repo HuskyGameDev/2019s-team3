@@ -102,7 +102,7 @@
 	{
 		if (!holditem)
 			return;
-        holditem.GetComponent<Throwable>().PickUp(guide, playerCollider);
+        holditem.GetComponent<Throwable>().PickUp(guide, true);
          canHold = false;
      }
  
