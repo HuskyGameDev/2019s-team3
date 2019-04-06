@@ -75,10 +75,12 @@ public class GameManager : MonoBehaviour {
 	
 	public void RemoveOneUp() {
 		SetOneUps(current1Ups - 1);
+		Score.subtractScore(40);
 	}
 	
 	public void AddOneUp() {
 		SetOneUps(current1Ups + 1);
+		Score.addScore(30);
 	}
 	
 	public int GetOneUp() {
@@ -93,6 +95,7 @@ public class GameManager : MonoBehaviour {
     public void AddCoins(int coins)
     {
         SetCoins(currentCoins + coins);
+		Score.addScore(coins);
     }
 
     public void SetCoins(int coins)
@@ -104,6 +107,7 @@ public class GameManager : MonoBehaviour {
     public void PickUpOneCoin()
     {
         SetCoins(currentCoins + 1);
+		Score.addScore(1);
     }
 
     public int GetCoins()
@@ -179,6 +183,7 @@ public class GameManager : MonoBehaviour {
     {
         SetKeyFragments(currentKeyFragments + 1);
         AkSoundEngine.PostEvent("Checkpoint", this.gameObject);
+		Score.addScore(50);
     }
 
     public int GetFragments()
