@@ -6,6 +6,7 @@
 	public float throwSpeed;
 	private float originalThrowSpeed;
 	public bool canHold = true;
+    public GameObject playerCollider;
 	private GameObject holditem;
 	public Transform guide;
     private bool pickingUp = false;
@@ -101,7 +102,7 @@
 	{
 		if (!holditem)
 			return;
-        holditem.GetComponent<Throwable>().PickUp(guide);
+        holditem.GetComponent<Throwable>().PickUp(guide, playerCollider);
          canHold = false;
      }
  

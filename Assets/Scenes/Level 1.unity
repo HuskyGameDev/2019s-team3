@@ -64130,6 +64130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   throwSpeed: 10
   canHold: 1
+  playerCollider: {fileID: 758619998}
   guide: {fileID: 1676307212}
   chargeRate: 1
   panel: {fileID: 529813160}

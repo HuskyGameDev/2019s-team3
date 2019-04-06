@@ -8,11 +8,11 @@ public class Target : Throwable {
     private int slaveID;
     private bool active = true;
 
-    public new void PickUp(Transform guide)
+    public new void PickUp(Transform guide, GameObject thrower)
     {
         if(!active)
         {
-            (this as Throwable).PickUp(guide);
+            (this as Throwable).PickUp(guide, thrower);
         }
     }
 

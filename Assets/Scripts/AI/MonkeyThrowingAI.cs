@@ -13,6 +13,7 @@ public class MonkeyThrowingAI : MonoBehaviour
     const float throwSpeed = 20;
     Transform player;
     public Transform guide;
+    public GameObject thisMonkey;
     bool isClose;
     const float newRockDelay = 3;
     const float throwDelay = 1;
@@ -36,7 +37,7 @@ public class MonkeyThrowingAI : MonoBehaviour
             
             holding = true;
             currentRock = Instantiate(projectile, guide, true);
-            projectile.PickUp(guide);
+            projectile.PickUp(guide, thisMonkey);
             Debug.Log(guide.position);
             time = Time.realtimeSinceStartup;
         }
