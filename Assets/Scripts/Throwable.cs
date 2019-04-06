@@ -7,9 +7,9 @@ public class Throwable : MonoBehaviour {
     bool live = false; // gameobject is in motion and should damage actors that it collides with
     GameObject thrower;
 
-    public virtual void PickUp(Transform guide, GameObject thrower)
+    public virtual void PickUp(Transform guide, GameObject grabber)
     {
-        this.thrower = thrower;
+        this.thrower = grabber;
         live = false;
         // set gravity to false while holding it
         this.GetComponent<Rigidbody>().useGravity = false;
@@ -58,14 +58,14 @@ public class Throwable : MonoBehaviour {
             //object should check if it hit the ground, 
             //otherwise it should try to damage the player/actor it hit
             Actor actor;
-            if(collision.gameObject.name == thrower.name)
-            {
-                return;
-            }
-            else if (collision.gameObject.name == "Terrain")
+            if (collision.gameObject.name == "Terrain")
             {
                 live = false;
                 Debug.Log("throwable hit the ground");
+            }
+            else if (collision.gameObject.name == thrower.name)
+            {
+                return;
             }
             else if(collision.gameObject.tag == "Player")
             {
