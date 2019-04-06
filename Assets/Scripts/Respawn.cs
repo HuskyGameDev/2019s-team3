@@ -35,12 +35,12 @@ public class Respawn : MonoBehaviour {
 	}
 	
 	private void CloseGame() {
-	#if UNITY_EDITOR
+	//#if UNITY_EDITOR
 		// Application.Quit() does not work in the editor
-		UnityEditor.EditorApplication.isPlaying = false;
-	#else
-		Application.Quit();
-	#endif
+		//UnityEditor.EditorApplication.isPlaying = false;
+	//#else
+		Application.LoadLevel("EndOfLevel");
+	//#endif
 	}
 	
 	private Vector3 ClosestSpawn() {
