@@ -8,7 +8,7 @@ public class GalleryDoor : GallerySwitchable {
 
     // Use this for initialization
     void Start () {
-		
+        Toggle();
 	}
 	
 	// Update is called once per frame

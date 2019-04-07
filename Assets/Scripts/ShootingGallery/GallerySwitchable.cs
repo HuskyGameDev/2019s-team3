@@ -8,8 +8,7 @@ public abstract class GallerySwitchable : MonoBehaviour {
     public abstract void Toggle();
 
     // Use this for initialization
-    void Start () {
-		
+    void Start () { 
 	}
 	
 	// Update is called once per frame
