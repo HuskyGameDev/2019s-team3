@@ -159,6 +159,62 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Reggie_Pickup" ID="{81BB903A-9B75-4CC4-B858-9E165B968515}">
+					<ChildrenList>
+						<Action Name="" ID="{E043E233-E621-411E-BD5C-EA5F84213F5D}" ShortID="460578098">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reggie_Pickup" ID="{840B7118-354C-4C28-878F-5C5DD31144AA}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reggie_Throw" ID="{A705AC02-4D72-4EEA-93EB-6725E117A597}">
+					<ChildrenList>
+						<Action Name="" ID="{2D62ADE0-76E9-48BC-B1B8-BB2C312C394E}" ShortID="76913395">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reggie_Throw" ID="{66082A0E-EAFD-4D88-8750-5C74D1ABB563}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reggie_Victory" ID="{A63ACCA8-C434-4127-BECE-30D819511EAB}">
+					<ChildrenList>
+						<Action Name="" ID="{786694F5-EA14-417A-A48A-B9F8E0F930CA}" ShortID="161130500">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reggie_Taunt" ID="{EA566BDF-E3C7-490B-B7F8-2B624466ABC7}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reggie_Hurt" ID="{D2DA263A-EAC6-47DD-A752-E222B8904643}">
+					<ChildrenList>
+						<Action Name="" ID="{CBDEF088-11CB-4110-BF32-240ECB46A0F0}" ShortID="931271002">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Reggie_Hurt" ID="{A00D8E2D-2709-4488-861F-8C6CFE55DB25}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

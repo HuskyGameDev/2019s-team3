@@ -629,6 +629,456 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Reggie_Throw" ID="{66082A0E-EAFD-4D88-8750-5C74D1ABB563}" ShortID="16204905">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Throwing" ID="{A6326015-7415-4EAC-921F-2ECAE1E67871}" ShortID="914357076">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing" ID="{DB8224CA-094F-46E4-98A5-D5250DEFBE0D}" ShortID="89029483">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="4.75721523728539E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.52450801749271E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing" ID="{DB8224CA-094F-46E4-98A5-D5250DEFBE0D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Throwing2" ID="{56360C69-E4A7-4F87-AE47-C921BF0DF4CF}" ShortID="284046286">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing2" ID="{3A3D0227-BDAF-42D7-9A7D-5938BB97DB10}" ShortID="495728254">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="4.89679755830904E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="5.25952330336896E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing2" ID="{3A3D0227-BDAF-42D7-9A7D-5938BB97DB10}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Throwing3" ID="{D572FB47-914B-4153-B303-B64898E20B22}" ShortID="811632083">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing3" ID="{29066DD9-C69F-4444-9320-8C71E94B5C46}" ShortID="37776866">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.08207047700032E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.146485007693554"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing3" ID="{29066DD9-C69F-4444-9320-8C71E94B5C46}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Reggie_Pickup" ID="{840B7118-354C-4C28-878F-5C5DD31144AA}" ShortID="797774893">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Pickup" ID="{8280D6BB-E9BF-417D-B67F-2FEC11302553}" ShortID="498751134">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup" ID="{9D0268E8-1766-4AD3-9880-472A9923073E}" ShortID="467820417">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.046038224813735"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.104632329122125"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.144392614188533"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.81850988014253"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup" ID="{9D0268E8-1766-4AD3-9880-472A9923073E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup2" ID="{5D1CA6D7-0518-4379-A135-CD2718DE4CAE}" ShortID="16048665">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup2" ID="{17486F8E-57C1-4DE9-BD96-DB9CD9ED5ACF}" ShortID="211589110">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.09151785714286E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.150669642857143"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.17578125"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.02008928571429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup2" ID="{17486F8E-57C1-4DE9-BD96-DB9CD9ED5ACF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup3" ID="{C943410B-9BBC-4A22-ABC2-D7834502723A}" ShortID="434012261">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup3" ID="{27E793CA-138A-4580-B898-C11C3505D1CA}" ShortID="549691024">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.67857142857143E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.01339285714285E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup3" ID="{27E793CA-138A-4580-B898-C11C3505D1CA}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup4" ID="{5BF4A700-CD0E-42F6-B773-A79049C0F58B}" ShortID="1010132605">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup4" ID="{1BB21D82-1ACE-40DF-9703-A036549767F1}" ShortID="663337067">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="4.57599661888565E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="2.79024184078394E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup4" ID="{1BB21D82-1ACE-40DF-9703-A036549767F1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup5" ID="{BB4304BA-DBD9-4EB2-91A5-58CE00967F97}" ShortID="609174201">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup5" ID="{9B855D60-0D39-4625-9268-DFBA4C847397}" ShortID="1005389736">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="2.63317440071267E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="3.54116557337221E-02"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup5" ID="{9B855D60-0D39-4625-9268-DFBA4C847397}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Reggie_Hurt" ID="{A00D8E2D-2709-4488-861F-8C6CFE55DB25}" ShortID="495512453">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Test Hurt" ID="{67DE51C7-8A80-4A75-9584-BC09C2BF2465}" ShortID="70356793">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-29</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Hurt" ID="{140330E9-8A9F-474B-AA7E-6C0DA21927DC}" ShortID="531976311">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.52380952380985E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.190476190476193"/>
+												<Property Name="TrimBegin" Type="Real64" Value="13.4821428571429"/>
+												<Property Name="TrimEnd" Type="Real64" Value="14.0734126984127"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Hurt.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="28821724"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Hurt" ID="{140330E9-8A9F-474B-AA7E-6C0DA21927DC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Test Hurt_01" ID="{C104C430-0009-497F-87EE-C823DFA8A574}" ShortID="534132965">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-28</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Hurt" ID="{80B722D8-3FFB-4F5B-B5B6-7878B1F2993D}" ShortID="28821724">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.52380952380949E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="9.52380952380949E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="15.1071428571429"/>
+												<Property Name="TrimEnd" Type="Real64" Value="16.1299603174603"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Hurt.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="721990524"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Hurt" ID="{80B722D8-3FFB-4F5B-B5B6-7878B1F2993D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Test Hurt_02" ID="{58D39EB8-ADBE-4719-82A5-04385A962C48}" ShortID="392627718">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-23</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Hurt" ID="{45FB21C6-5222-400A-A766-5A7CD4A23846}" ShortID="721990524">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="5.95238095238093E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.083333333333333"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.83035714285714"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.79464285714285"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Hurt.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="531976311"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Hurt" ID="{45FB21C6-5222-400A-A766-5A7CD4A23846}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Reggie_Taunt" ID="{EA566BDF-E3C7-490B-B7F8-2B624466ABC7}" ShortID="793142055">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Test Win" ID="{4098BD48-E052-4B91-A14D-D5B21C2C58D6}" ShortID="58112195">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Win" ID="{31CD3DF5-8765-47F2-8197-45E8EA28F0A5}" ShortID="465414618">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="8.03571428571428E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="8.92857142857144E-02"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.54241071428571"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.21428571428572"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Win.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="769581041"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Win" ID="{31CD3DF5-8765-47F2-8197-45E8EA28F0A5}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Test Win_01" ID="{D17EBDF4-D796-4B81-A056-DE304D766EE3}" ShortID="300743629">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-24</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Win" ID="{AA369E52-3D8F-42DD-9C9E-428F9CF350A4}" ShortID="1037184060">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.140625"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.180803571428571"/>
+												<Property Name="TrimBegin" Type="Real64" Value="6.01116071428571"/>
+												<Property Name="TrimEnd" Type="Real64" Value="7.08258928571429"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Win.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Win" ID="{AA369E52-3D8F-42DD-9C9E-428F9CF350A4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Test Win_02" ID="{19CBD511-63D6-4755-BD0A-BF34C8AEF625}" ShortID="110691166">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-30</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Test Win" ID="{180FFF34-CC32-408B-AA43-F4103CA29F0F}" ShortID="769581041">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="9.82142857142847E-02"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.107142857142858"/>
+												<Property Name="TrimBegin" Type="Real64" Value="16.5491071428571"/>
+												<Property Name="TrimEnd" Type="Real64" Value="17.4732142857143"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Reggie Test Win.wav</AudioFile>
+											<ConvertedFileIDList>
+												<File ID="465414618"/>
+											</ConvertedFileIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Test Win" ID="{180FFF34-CC32-408B-AA43-F4103CA29F0F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
 					</ChildrenList>
 				</ActorMixer>
 				<ActorMixer Name="Enemies" ID="{CA2047FB-B50D-4B71-96FE-9E73BF9D2935}" ShortID="304151364">
@@ -643,7 +1093,7 @@
 				</ActorMixer>
 				<ActorMixer Name="Interactables" ID="{CD8569FF-F3F6-4D7D-970F-14EBB9E65E98}" ShortID="524402856">
 					<PropertyList>
-						<Property Name="EnablePositioning" Type="bool" Value="False"/>
+						<Property Name="PositioningType" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>1</Value>
@@ -651,6 +1101,9 @@
 						</Property>
 					</PropertyList>
 					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="New Attenuation" ID="{199DD362-CAE4-4EA9-B61A-58110DCA4B86}" WorkUnitID="{4AF2BBD0-8101-495C-ABD7-A4DAD18C2473}"/>
+						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
 						</Reference>

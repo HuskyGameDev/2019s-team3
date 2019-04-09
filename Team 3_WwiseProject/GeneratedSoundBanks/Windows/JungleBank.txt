@@ -1,25 +1,43 @@
 Event	ID	Name			Wwise Object Path	Notes
 	612075679	Checkpoint			\Default Work Unit\Checkpoint	
 	977454165	Button			\Default Work Unit\Button	
+	1386647150	Reggie_Hurt			\Default Work Unit\Reggie_Hurt	
+	1427215671	Reggie_Throw			\Default Work Unit\Reggie_Throw	
+	1635775721	Reggie_Pickup			\Default Work Unit\Reggie_Pickup	
 	1866025847	Footstep			\Default Work Unit\Footstep	
+	1898827277	Reggie_Victory			\Default Work Unit\Reggie_Victory	
 	2397454474	JungleAmbience			\Default Work Unit\JungleAmbience	
 	2752428610	CoinPickup			\Default Work Unit\CoinPickup	
 	3029536662	Music_Jungle			\Default Work Unit\Music_Jungle	
 	3833651337	Jump			\Default Work Unit\Jump	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	197021754	Dirt Footsteps#01_03	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Dirt Footsteps#01_C99955B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Lift\Dirt Footsteps#01_03		24800
-	236262193	Grass Footsteps#01_04	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_F28DD493.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_04		46810
-	385288777	Grass Footsteps#01	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_895FF704.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01		33258
-	491135512	Button Ring	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Button Ring_821E12E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Button Ring		119156
-	615168643	TOTS_JungleMusic_V2	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\TOTS_JungleMusic_V2_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\TOTS_JungleMusic_V2		10231344
-	630086569	Jump Woosh	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\StickSwooshTake01_FC5BED5D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Woosh		12160
-	652019439	Coin Pickup_V1	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Coin Pickup_V1_587492FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Coin Pickup_V1		111616
-	676835150	Grass Footsteps#01_01	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_C3AF6454.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_01		33594
-	704451495	Grass Footsteps#01_03	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_3EB13E43.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_03		30004
-	714095219	Checkpoint	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Health Pickup_C419ACF8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Checkpoint		279812
-	781943041	Dirt Footsteps#01_04	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Dirt Footsteps#01_D93C6DFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Lift\Dirt Footsteps#01_04		38734
-	826811789	Grass Footsteps#01_02	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_D6C7B26A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_02		36612
-	863570735	Jungle Ambience_V2	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Jungle Ambience_V2_31D22EEE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Ambience\Jungle Ambience\Jungle Ambience_V2		59290624
-	1031954601	Button Click	C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Button Click_826AD5EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Button Click		44344
+	28821724	Reggie Test Hurt	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Hurt_6AE4440C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Hurt\Reggie Test Hurt		104360
+	37776866	Reggie Throwing3	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Throwing3_DCEA7CDE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Throw\Reggie Throwing3		463196
+	89029483	Reggie Throwing	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Throwing_5B4E79D2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Throw\Reggie Throwing		242692
+	197021754	Dirt Footsteps#01_03	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Dirt Footsteps#01_C99955B4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Lift\Dirt Footsteps#01_03		24800
+	211589110	Reggie Pickup2	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Pickup2_B95BC251.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Pickup\Reggie Pickup2		325400
+	236262193	Grass Footsteps#01_04	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_F28DD493.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_04		46810
+	385288777	Grass Footsteps#01	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_895FF704.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01		33258
+	465414618	Reggie Test Win_02	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Win_9B908C63.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Taunt\Reggie Test Win_02		163076
+	467820417	Reggie Pickup	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Pickup_2A904C52.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Pickup\Reggie Pickup		295376
+	491135512	Button Ring	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Button Ring_821E12E1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Button Ring		119156
+	495728254	Reggie Throwing2	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Throwing2_4A1302B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Throw\Reggie Throwing2		286796
+	531976311	Reggie Test Hurt_02	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Hurt_47B195F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Hurt\Reggie Test Hurt_02		170164
+	549691024	Reggie Pickup3	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Pickup3_55F2AE67.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Pickup\Reggie Pickup3		176544
+	615168643	TOTS_JungleMusic_V2	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\TOTS_JungleMusic_V2_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Music\TOTS_JungleMusic_V2		10231344
+	630086569	Jump Woosh	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\StickSwooshTake01_410E4523.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump Woosh		12160
+	652019439	Coin Pickup_V1	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Coin Pickup_V1_587492FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Coin Pickup_V1		111616
+	663337067	Reggie Pickup4	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Pickup4_DB4770EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Pickup\Reggie Pickup4		176548
+	676835150	Grass Footsteps#01_01	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_C3AF6454.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_01		33594
+	704451495	Grass Footsteps#01_03	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_3EB13E43.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_03		30004
+	714095219	Checkpoint	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Health Pickup_C419ACF8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Checkpoint		279812
+	721990524	Reggie Test Hurt_01	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Hurt_7E44D879.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Hurt\Reggie Test Hurt_01		180488
+	769581041	Reggie Test Win	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Win_6FFDC347.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Taunt\Reggie Test Win		118584
+	781943041	Dirt Footsteps#01_04	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Dirt Footsteps#01_D93C6DFE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Jump_Lift\Dirt Footsteps#01_04		38734
+	826811789	Grass Footsteps#01_02	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Grass Footsteps#01_D6C7B26A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Footsteps_Grass\Grass Footsteps#01_02		36612
+	863570735	Jungle Ambience_V2	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Jungle Ambience_V2_31D22EEE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Environment\Ambience\Jungle Ambience\Jungle Ambience_V2		59290624
+	1005389736	Reggie Pickup5	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Pickup5_92CC318A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Pickup\Reggie Pickup5		143656
+	1031954601	Button Click	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Button Click_826AD5EF.wem		\Actor-Mixer Hierarchy\Default Work Unit\Interactables\Button Click		44344
+	1037184060	Reggie Test Win_01	C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\SFX\Reggie Test Win_90A8D429.wem		\Actor-Mixer Hierarchy\Default Work Unit\Player\Reggie_Taunt\Reggie Test Win_01		189064
 

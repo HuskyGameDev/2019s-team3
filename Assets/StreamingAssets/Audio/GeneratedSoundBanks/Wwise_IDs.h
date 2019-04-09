@@ -20,6 +20,10 @@ namespace AK
         static const AkUniqueID JUMP = 3833651337U;
         static const AkUniqueID JUNGLEAMBIENCE = 2397454474U;
         static const AkUniqueID MUSIC_JUNGLE = 3029536662U;
+        static const AkUniqueID REGGIE_HURT = 1386647150U;
+        static const AkUniqueID REGGIE_PICKUP = 1635775721U;
+        static const AkUniqueID REGGIE_THROW = 1427215671U;
+        static const AkUniqueID REGGIE_VICTORY = 1898827277U;
     } // namespace EVENTS
 
     namespace BANKS

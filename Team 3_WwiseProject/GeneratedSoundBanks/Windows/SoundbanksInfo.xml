@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="128">
 	<RootPaths>
-		<ProjectRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\atstocke\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\dstockero\Documents\Team 3\Team 3_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -16,18 +16,38 @@
 			<ShortName>JungleBank</ShortName>
 			<Path>JungleBank.bnk</Path>
 			<IncludedEvents>
-				<Event Id="977454165" Name="Button" ObjectPath="\Events\Default Work Unit\Button"/>
-				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint"/>
-				<Event Id="2752428610" Name="CoinPickup" ObjectPath="\Events\Default Work Unit\CoinPickup"/>
+				<Event Id="977454165" Name="Button" ObjectPath="\Events\Default Work Unit\Button" MaxAttenuation="100.000000"/>
+				<Event Id="612075679" Name="Checkpoint" ObjectPath="\Events\Default Work Unit\Checkpoint" MaxAttenuation="100.000000"/>
+				<Event Id="2752428610" Name="CoinPickup" ObjectPath="\Events\Default Work Unit\CoinPickup" MaxAttenuation="100.000000"/>
 				<Event Id="1866025847" Name="Footstep" ObjectPath="\Events\Default Work Unit\Footstep"/>
 				<Event Id="3833651337" Name="Jump" ObjectPath="\Events\Default Work Unit\Jump"/>
 				<Event Id="2397454474" Name="JungleAmbience" ObjectPath="\Events\Default Work Unit\JungleAmbience"/>
 				<Event Id="3029536662" Name="Music_Jungle" ObjectPath="\Events\Default Work Unit\Music_Jungle"/>
+				<Event Id="1386647150" Name="Reggie_Hurt" ObjectPath="\Events\Default Work Unit\Reggie_Hurt"/>
+				<Event Id="1635775721" Name="Reggie_Pickup" ObjectPath="\Events\Default Work Unit\Reggie_Pickup"/>
+				<Event Id="1427215671" Name="Reggie_Throw" ObjectPath="\Events\Default Work Unit\Reggie_Throw"/>
+				<Event Id="1898827277" Name="Reggie_Victory" ObjectPath="\Events\Default Work Unit\Reggie_Victory"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="28821724" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_6AE4440C.wem</Path>
+				</File>
+				<File Id="37776866" Language="SFX">
+					<ShortName>Reggie Throwing3.wav</ShortName>
+					<Path>SFX\Reggie Throwing3_DCEA7CDE.wem</Path>
+				</File>
+				<File Id="89029483" Language="SFX">
+					<ShortName>Reggie Throwing.wav</ShortName>
+					<Path>SFX\Reggie Throwing_5B4E79D2.wem</Path>
+				</File>
 				<File Id="197021754" Language="SFX">
 					<ShortName>Dirt Footsteps#01.wav</ShortName>
 					<Path>SFX\Dirt Footsteps#01_C99955B4.wem</Path>
+				</File>
+				<File Id="211589110" Language="SFX">
+					<ShortName>Reggie Pickup2.wav</ShortName>
+					<Path>SFX\Reggie Pickup2_B95BC251.wem</Path>
 				</File>
 				<File Id="236262193" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
@@ -37,9 +57,29 @@
 					<ShortName>Grass Footsteps#01.wav</ShortName>
 					<Path>SFX\Grass Footsteps#01_895FF704.wem</Path>
 				</File>
+				<File Id="465414618" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_9B908C63.wem</Path>
+				</File>
+				<File Id="467820417" Language="SFX">
+					<ShortName>Reggie Pickup.wav</ShortName>
+					<Path>SFX\Reggie Pickup_2A904C52.wem</Path>
+				</File>
 				<File Id="491135512" Language="SFX">
 					<ShortName>Button Ring.wav</ShortName>
 					<Path>SFX\Button Ring_821E12E1.wem</Path>
+				</File>
+				<File Id="495728254" Language="SFX">
+					<ShortName>Reggie Throwing2.wav</ShortName>
+					<Path>SFX\Reggie Throwing2_4A1302B7.wem</Path>
+				</File>
+				<File Id="531976311" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_47B195F0.wem</Path>
+				</File>
+				<File Id="549691024" Language="SFX">
+					<ShortName>Reggie Pickup3.wav</ShortName>
+					<Path>SFX\Reggie Pickup3_55F2AE67.wem</Path>
 				</File>
 				<File Id="615168643" Language="SFX">
 					<ShortName>TOTS_JungleMusic_V2.wav</ShortName>
@@ -47,11 +87,15 @@
 				</File>
 				<File Id="630086569" Language="SFX">
 					<ShortName>StickSwooshTake01.wav</ShortName>
-					<Path>SFX\StickSwooshTake01_FC5BED5D.wem</Path>
+					<Path>SFX\StickSwooshTake01_410E4523.wem</Path>
 				</File>
 				<File Id="652019439" Language="SFX">
 					<ShortName>Coin Pickup_V1.wav</ShortName>
 					<Path>SFX\Coin Pickup_V1_587492FE.wem</Path>
+				</File>
+				<File Id="663337067" Language="SFX">
+					<ShortName>Reggie Pickup4.wav</ShortName>
+					<Path>SFX\Reggie Pickup4_DB4770EE.wem</Path>
 				</File>
 				<File Id="676835150" Language="SFX">
 					<ShortName>Grass Footsteps#01.wav</ShortName>
@@ -65,6 +109,14 @@
 					<ShortName>Health Pickup.wav</ShortName>
 					<Path>SFX\Health Pickup_C419ACF8.wem</Path>
 				</File>
+				<File Id="721990524" Language="SFX">
+					<ShortName>Reggie Test Hurt.wav</ShortName>
+					<Path>SFX\Reggie Test Hurt_7E44D879.wem</Path>
+				</File>
+				<File Id="769581041" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_6FFDC347.wem</Path>
+				</File>
 				<File Id="781943041" Language="SFX">
 					<ShortName>Dirt Footsteps#01.wav</ShortName>
 					<Path>SFX\Dirt Footsteps#01_D93C6DFE.wem</Path>
@@ -77,9 +129,17 @@
 					<ShortName>Jungle Ambience_V2.wav</ShortName>
 					<Path>SFX\Jungle Ambience_V2_31D22EEE.wem</Path>
 				</File>
+				<File Id="1005389736" Language="SFX">
+					<ShortName>Reggie Pickup5.wav</ShortName>
+					<Path>SFX\Reggie Pickup5_92CC318A.wem</Path>
+				</File>
 				<File Id="1031954601" Language="SFX">
 					<ShortName>Button Click.wav</ShortName>
 					<Path>SFX\Button Click_826AD5EF.wem</Path>
+				</File>
+				<File Id="1037184060" Language="SFX">
+					<ShortName>Reggie Test Win.wav</ShortName>
+					<Path>SFX\Reggie Test Win_90A8D429.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
