@@ -6,10 +6,11 @@ public class Score : MonoBehaviour {
 
     private bool gotKey = false;
     int ringScore = 0;
+    private GameManager gameManager;
 
     // Use this for initialization
     void Start() {
-
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -23,6 +24,7 @@ public class Score : MonoBehaviour {
         if (ringScore == 3)
         {
             gotKey = true;
+            gameManager.AddOneKeyFragment();
         }
     }
 
