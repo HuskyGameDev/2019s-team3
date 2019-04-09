@@ -6,6 +6,7 @@
 	public float throwSpeed;
 	private float originalThrowSpeed;
 	public bool canHold = true;
+    public GameObject playerCollider;
 	private GameObject holditem;
 	public Transform guide;
     private bool pickingUp = false;
@@ -52,7 +53,7 @@
             //TODO: change this to hitscanning - needs to check distance and check object type
             if (canHold)
             {
-                Debug.Log("Enabling item pick up");
+                //Debug.Log("Enabling item pick up");
                 pickingUp = true;
                 time = Time.realtimeSinceStartup;
             }
@@ -61,7 +62,7 @@
         {
             if (pickingUpBuffer < Time.realtimeSinceStartup - time)
             {
-                Debug.Log("Disabling item pickup");
+                //Debug.Log("Disabling item pickup");
                 pickingUp = false;
             }
         }
@@ -71,7 +72,7 @@
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Object is throwable: " + other.gameObject.GetComponent<Throwable>());
+        //Debug.Log("Object is throwable: " + other.gameObject.GetComponent<Throwable>());
     }
 
     void OnTriggerStay(Collider col)
@@ -83,7 +84,7 @@
                 float distance;
                 holditem = col.gameObject;
                 distance = Vector3.Distance(holditem.transform.position, guide.transform.position);
-                Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
+                //Debug.Log("Attempting to pick up " + holditem + ", distance = " + distance);
                 Pickup();
                 pickingUp = false;
             }
@@ -101,7 +102,7 @@
 	{
 		if (!holditem)
 			return;
-        holditem.GetComponent<Throwable>().PickUp(guide);
+        holditem.GetComponent<Throwable>().PickUp(guide, playerCollider);
          canHold = false;
      }
  

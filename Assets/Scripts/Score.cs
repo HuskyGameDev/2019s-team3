@@ -2,29 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Score : MonoBehaviour {
+public static class Score
+{
+    public static int score = 0;
 
-    private bool gotKey = false;
-    int ringScore = 0;
-
-    // Use this for initialization
-    void Start() {
-
-    }
-
-    // Update is called once per frame
-    void Update() {
-
-    }
-
-    private void OnTriggerEnter(Collider other)
+    public static void addScore(int amount)
     {
-        ringScore++;
-        if (ringScore == 3)
-        {
-            gotKey = true;
-        }
+        score += amount;
     }
 
-    
+    public static void subtractScore(int amount)
+    {
+        score -= amount;
+    }
+
+    public static int getScore()
+    {
+        return score;
+    }
 }

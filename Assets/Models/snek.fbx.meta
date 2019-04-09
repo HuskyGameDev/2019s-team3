@@ -33,7 +33,37 @@ ModelImporter:
     4300004: Sphere003
     4300006: Sphere004
     4300008: Sphere005
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #25'
+    second: {fileID: 2100000, guid: a7da384c202ab2f4bacb8992acb752bb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: c7ed296e12e2050479028f1676b543f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #27'
+    second: {fileID: 2100000, guid: 8da4369812cd4334dbbcf6c78afe343c, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: 6812140-a-scaly-snake-skin-texture-that-tiles-seamlessly-as-a-pattern-in-any-direction-
+    second: {fileID: 2800000, guid: 668af8a6207dcf4459686eba2fe2730b, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lrjfu
+    second: {fileID: 2800000, guid: 116464d64aa658644a4fc397840fa078, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: UoQDJ
+    second: {fileID: 2800000, guid: 0154b7c2a9fa8b94fa7b524f86fdccfd, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
