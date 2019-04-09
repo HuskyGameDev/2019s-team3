@@ -7,11 +7,12 @@ public class HoopScore : MonoBehaviour
 
     private bool gotKey = false;
     int ringScore = 0;
+    private GameManager gameManager;
 
     // Use this for initialization
     void Start()
     {
-
+        gameManager = FindObjectOfType<GameManager>();
     }
 
     // Update is called once per frame
@@ -26,6 +27,9 @@ public class HoopScore : MonoBehaviour
         if (ringScore == 3)
         {
             gotKey = true;
+            gameManager.AddOneKeyFragment();
         }
     }
+
+
 }
