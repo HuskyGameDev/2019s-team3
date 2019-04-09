@@ -13,23 +13,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AcousticTextureWwu:
   - Guid: '{F2B562E0-DA2D-47F0-9D50-FF83AD0F08F9}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1223632291
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -925657780
     ParentPhysicalPath: 
     PhysicalPath: Virtual Acoustics\Default Work Unit.wwu
     List: []
   autoPopulateEnabled: 1
   AuxBusWwu:
   - Guid: '{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1232224678
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -937424480
     ParentPhysicalPath: 
     PhysicalPath: Master-Mixer Hierarchy\Default Work Unit.wwu
     List: []
   BankWwu:
   - Guid: '{EDAC9D2F-E562-4B49-B5CE-85BEECCBBDFE}'
-    m_lastTimePart2: -1999224728
-    m_lastTimePsrt1: -1890571817
+    m_lastTimePart2: -1999193415
+    m_lastTimePsrt1: 1567979803
     ParentPhysicalPath: 
     PhysicalPath: SoundBanks\Default Work Unit.wwu
     List:
@@ -48,11 +48,35 @@ MonoBehaviour:
   defaultPoolSize: 4096
   EventWwu:
   - Guid: '{019D30F8-E35E-4989-A439-0E92721EE23E}'
-    m_lastTimePart2: -1999224728
-    m_lastTimePsrt1: -1899634672
+    m_lastTimePart2: -1999193415
+    m_lastTimePsrt1: 1550980136
     ParentPhysicalPath: 
     PhysicalPath: Events\Default Work Unit.wwu
     List:
+    - Guid: dfae602731aa1f499e69a248461d4787
+      ID: 977454165
+      Name: Button
+      Path: Default Work Unit\Button
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Button
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: e079740ad25ea14ab09ebc2c4628a389
+      ID: 612075679
+      Name: Checkpoint
+      Path: Default Work Unit\Checkpoint
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Checkpoint
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 3abb0ead1d2374409bf3c80130277e0d
       ID: -1542538686
       Name: CoinPickup
@@ -77,6 +101,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 85f4e9bceb0af748b9aaac89259d2a6e
+      ID: 1840676193
+      Name: Footstep_Dirt
+      Path: Default Work Unit\Footstep_Dirt
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Footstep_Dirt
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: d76e30b5428748439f2e3fffd3eb4024
+      ID: -461315959
+      Name: Jump
+      Path: Default Work Unit\Jump
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Jump
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - Guid: 066119d6e8e46a4795dd6ef3089ae7e4
       ID: -1897512822
       Name: JungleAmbience
@@ -89,12 +137,46 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - Guid: 85770400acdc0941aefa1f9acd818227
+      ID: -1265430634
+      Name: Music_Jungle
+      Path: Default Work Unit\Music_Jungle
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Music_Jungle
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: 18f9ebc2c6aff3478425bbdcb08056fe
+      ID: 1386647150
+      Name: Reggie_Hurt
+      Path: Default Work Unit\Reggie_Hurt
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Reggie_Hurt
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - Guid: bc9d040e6d1b46489d73c043415aa3d4
+      ID: 1971301610
+      Name: Reggie_Success
+      Path: Default Work Unit\Reggie_Success
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Reggie_Success
+        ObjectType: 3
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
   ExpandedItems:
   - /Team 3_WwiseProject
   - /Team 3_WwiseProject/Events
   - /Team 3_WwiseProject/Events/Default Work Unit
-  - /Team 3_WwiseProject/SoundBanks
-  - /Team 3_WwiseProject/SoundBanks/Default Work Unit
   language: English(US)
   lowerPoolSize: 2048
   m_lastPopulateTimePart2: 0
@@ -103,30 +185,30 @@ MonoBehaviour:
   preparePoolSize: 0
   RtpcWwu:
   - Guid: '{BD60C9E9-E66F-4C3E-A638-B408CE5F109D}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1238217449
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -952763337
     ParentPhysicalPath: 
     PhysicalPath: Game Parameters\Default Work Unit.wwu
     List: []
   StateWwu:
   - Guid: '{54284171-8A80-433A-A219-4CE4962DD4E7}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1223788519
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -925657780
     ParentPhysicalPath: 
     PhysicalPath: States\Default Work Unit.wwu
     List: []
   streamingPoolSize: 1024
   SwitchWwu:
   - Guid: '{917A6B19-2CF9-4E92-B5D0-2B245E340830}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1223632291
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -925657780
     ParentPhysicalPath: 
     PhysicalPath: Switches\Default Work Unit.wwu
     List: []
   TriggerWwu:
   - Guid: '{1D1953EA-E7A2-4258-8DE4-2A5F1E105F33}'
-    m_lastTimePart2: -1999226991
-    m_lastTimePsrt1: -1223632291
+    m_lastTimePart2: -1999206096
+    m_lastTimePsrt1: -925657780
     ParentPhysicalPath: 
     PhysicalPath: Triggers\Default Work Unit.wwu
     List: []
