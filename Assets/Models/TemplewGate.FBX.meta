@@ -1,0 +1,302 @@
+fileFormatVersion: 2
+guid: 6030b12579953c544b32b470e8b47337
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Box002
+    100004: Box003
+    100006: Box004
+    100008: Box005
+    100010: Box006
+    100012: Box007
+    100014: Box008
+    100016: Box011
+    100018: Box012
+    100020: Box013
+    100022: Box014
+    100024: Box015
+    100026: Cylinder001
+    100028: Cylinder002
+    100030: Cylinder003
+    100032: Cylinder004
+    100034: Cylinder005
+    100036: Cylinder006
+    100038: Cylinder007
+    100040: Cylinder008
+    100042: Cylinder009
+    100044: Cylinder010
+    100046: Cylinder011
+    100048: Cylinder012
+    100050: Cylinder013
+    100052: Cylinder014
+    100054: Cylinder015
+    100056: Cylinder016
+    100058: Cylinder017
+    100060: Cylinder018
+    100062: Cylinder019
+    100064: Cylinder020
+    100066: Cylinder021
+    100068: Cylinder022
+    100070: Cylinder023
+    100072: Cylinder024
+    100074: Cylinder025
+    100076: StraightStair001
+    100078: //RootNode
+    400000: Box001
+    400002: Box002
+    400004: Box003
+    400006: Box004
+    400008: Box005
+    400010: Box006
+    400012: Box007
+    400014: Box008
+    400016: Box011
+    400018: Box012
+    400020: Box013
+    400022: Box014
+    400024: Box015
+    400026: Cylinder001
+    400028: Cylinder002
+    400030: Cylinder003
+    400032: Cylinder004
+    400034: Cylinder005
+    400036: Cylinder006
+    400038: Cylinder007
+    400040: Cylinder008
+    400042: Cylinder009
+    400044: Cylinder010
+    400046: Cylinder011
+    400048: Cylinder012
+    400050: Cylinder013
+    400052: Cylinder014
+    400054: Cylinder015
+    400056: Cylinder016
+    400058: Cylinder017
+    400060: Cylinder018
+    400062: Cylinder019
+    400064: Cylinder020
+    400066: Cylinder021
+    400068: Cylinder022
+    400070: Cylinder023
+    400072: Cylinder024
+    400074: Cylinder025
+    400076: StraightStair001
+    400078: //RootNode
+    2100000: 'Material #26'
+    2100002: No Name
+    2300000: Box001
+    2300002: Box002
+    2300004: Box003
+    2300006: Box004
+    2300008: Box005
+    2300010: Box006
+    2300012: Box007
+    2300014: Box008
+    2300016: Box011
+    2300018: Box012
+    2300020: Box013
+    2300022: Box014
+    2300024: Box015
+    2300026: Cylinder001
+    2300028: Cylinder002
+    2300030: Cylinder003
+    2300032: Cylinder004
+    2300034: Cylinder005
+    2300036: Cylinder006
+    2300038: Cylinder007
+    2300040: Cylinder008
+    2300042: Cylinder009
+    2300044: Cylinder010
+    2300046: Cylinder011
+    2300048: Cylinder012
+    2300050: Cylinder013
+    2300052: Cylinder014
+    2300054: Cylinder015
+    2300056: Cylinder016
+    2300058: Cylinder017
+    2300060: Cylinder018
+    2300062: Cylinder019
+    2300064: Cylinder020
+    2300066: Cylinder021
+    2300068: Cylinder022
+    2300070: Cylinder023
+    2300072: Cylinder024
+    2300074: Cylinder025
+    2300076: StraightStair001
+    3300000: Box001
+    3300002: Box002
+    3300004: Box003
+    3300006: Box004
+    3300008: Box005
+    3300010: Box006
+    3300012: Box007
+    3300014: Box008
+    3300016: Box011
+    3300018: Box012
+    3300020: Box013
+    3300022: Box014
+    3300024: Box015
+    3300026: Cylinder001
+    3300028: Cylinder002
+    3300030: Cylinder003
+    3300032: Cylinder004
+    3300034: Cylinder005
+    3300036: Cylinder006
+    3300038: Cylinder007
+    3300040: Cylinder008
+    3300042: Cylinder009
+    3300044: Cylinder010
+    3300046: Cylinder011
+    3300048: Cylinder012
+    3300050: Cylinder013
+    3300052: Cylinder014
+    3300054: Cylinder015
+    3300056: Cylinder016
+    3300058: Cylinder017
+    3300060: Cylinder018
+    3300062: Cylinder019
+    3300064: Cylinder020
+    3300066: Cylinder021
+    3300068: Cylinder022
+    3300070: Cylinder023
+    3300072: Cylinder024
+    3300074: Cylinder025
+    3300076: StraightStair001
+    4300000: Box001
+    4300002: Box002
+    4300004: Box003
+    4300006: Box004
+    4300008: Box005
+    4300010: Box006
+    4300012: Box007
+    4300014: StraightStair001
+    4300016: Box008
+    4300018: Box011
+    4300020: Box012
+    4300022: Box013
+    4300024: Cylinder001
+    4300026: Cylinder002
+    4300028: Cylinder003
+    4300030: Cylinder004
+    4300032: Cylinder005
+    4300034: Cylinder006
+    4300036: Cylinder007
+    4300038: Cylinder008
+    4300040: Cylinder009
+    4300042: Cylinder010
+    4300044: Cylinder011
+    4300046: Cylinder012
+    4300048: Cylinder013
+    4300050: Cylinder014
+    4300052: Cylinder015
+    4300054: Cylinder016
+    4300056: Cylinder017
+    4300058: Cylinder018
+    4300060: Cylinder019
+    4300062: Cylinder020
+    4300064: Cylinder021
+    4300066: Cylinder022
+    4300068: Cylinder023
+    4300070: Cylinder024
+    4300072: Cylinder025
+    4300074: Box014
+    4300076: Box015
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #26'
+    second: {fileID: 2100000, guid: fdea272da2f181d429c7c96bd7bc6d2a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: ebd37ea03cac8b841ad402a31e449d64, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: brick_pavement_0096_01_preview
+    second: {fileID: 2800000, guid: 75e9dc093bb954e408d21c454d8a3f35, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

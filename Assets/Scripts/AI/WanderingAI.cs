@@ -28,7 +28,7 @@ public class WanderingAI : Actor
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(player.transform.position, transform.position) < 15)
+        if (player != null && Vector3.Distance(player.transform.position, transform.position) < 15)
         {
             timer = 0;
             agent.speed = originalSpeed * 2;
