@@ -5,14 +5,13 @@ using UnityEngine;
 public class HoopScore : MonoBehaviour
 {
 
-    private bool gotKey = false;
-    int ringScore = 0;
-    private GameManager gameManager;
+    private bool scored = false;
+    private HoopManager manager;
 
     // Use this for initialization
     void Start()
     {
-        gameManager = FindObjectOfType<GameManager>();
+        manager = FindObjectOfType<HoopManager>();
     }
 
     // Update is called once per frame
@@ -23,11 +22,10 @@ public class HoopScore : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ringScore++;
-        if (ringScore == 3)
+        if (!scored)
         {
-            gotKey = true;
-            gameManager.AddOneKeyFragment();
+            scored = true;
+            manager.Score();
         }
     }
 
