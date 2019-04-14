@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : MonoBehaviour
+{
 
     public int currentCoins = 0;
     public int currentHearts = 3;
@@ -22,9 +23,12 @@ public class GameManager : MonoBehaviour {
 
     private PlayerController player;
 
-    private int heart1BlinkState = 0;
-    private int heart2BlinkState = 0;
-    private int heart3BlinkState = 0;
+    private int heart1BlinkCount = 0;
+    private int heart2BlinkCount = 0;
+    private int heart3BlinkCount = 0;
+    private bool heart1Blinking = false;
+    private bool heart2Blinking = false;
+    private bool heart3Blinking = false;
 
     public float DialogTextRenderRate = 0.1f;
     public float DialogTextShowDuration = 4.0f;
@@ -35,11 +39,12 @@ public class GameManager : MonoBehaviour {
     private bool dialogTextRendering = false;
     private Queue<string> dialogQueue;
     private DateTime lastClearRequestTime;
-	
-	private bool isImmune = false;
+    
+    private bool isImmune = false;
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         if (HeartBlinkCount % 2 == 0)
         {
             HeartBlinkCount++; // must be an odd number or it won't work. 
@@ -51,41 +56,48 @@ public class GameManager : MonoBehaviour {
         dialogQueue = new Queue<string>();
         player = FindObjectOfType<PlayerController>();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         if (!dialogTextRendering && dialogQueue.Count > 0)
         {
             DisplayDialog(dialogQueue.Dequeue());
         }
     }
-	
-	public void SetImmunity(bool i) {
-		isImmune = i;
-	}
-	
-	public bool GetImmunity() {
-		return isImmune;
-	}
-	
-	public void SetOneUps(int oneups) {
-		current1Ups = oneups;
-		OneUpText.text = current1Ups.ToString() + " x ";
-	}
-	
-	public void RemoveOneUp() {
-		SetOneUps(current1Ups - 1);
-		Score.subtractScore(40);
-	}
-	
-	public void AddOneUp() {
-		SetOneUps(current1Ups + 1);
-		Score.addScore(30);
-	}
-	
-	public int GetOneUp() {
-		return current1Ups;
-	}
+
+    public void SetImmunity(bool i)
+    {
+        isImmune = i;
+    }
+
+    public bool GetImmunity()
+    {
+        return isImmune;
+    }
+
+    public void SetOneUps(int oneups)
+    {
+        current1Ups = oneups;
+        OneUpText.text = current1Ups.ToString() + " x ";
+    }
+
+    public void RemoveOneUp()
+    {
+        SetOneUps(current1Ups - 1);
+        Score.subtractScore(40);
+    }
+
+    public void AddOneUp()
+    {
+        SetOneUps(current1Ups + 1);
+        Score.addScore(30);
+    }
+
+    public int GetOneUp()
+    {
+        return current1Ups;
+    }
 
     public void RemoveCoins(int coins)
     {
@@ -95,7 +107,7 @@ public class GameManager : MonoBehaviour {
     public void AddCoins(int coins)
     {
         SetCoins(currentCoins + coins);
-		Score.addScore(coins);
+        Score.addScore(coins);
     }
 
     public void SetCoins(int coins)
@@ -107,7 +119,7 @@ public class GameManager : MonoBehaviour {
     public void PickUpOneCoin()
     {
         SetCoins(currentCoins + 1);
-		Score.addScore(1);
+        Score.addScore(1);
     }
 
     public int GetCoins()
@@ -117,9 +129,10 @@ public class GameManager : MonoBehaviour {
 
     public void RemoveHearts(int hearts, Vector3 direction = new Vector3())
     {
-        if(!isImmune) {
-			SetHearts(currentHearts - hearts, direction);
-		}
+        if (!isImmune)
+        {
+            SetHearts(currentHearts - hearts, direction);
+        }
     }
 
     public void AddHearts(int hearts)
@@ -133,6 +146,18 @@ public class GameManager : MonoBehaviour {
         currentHearts = hearts;
         if (previousHearts < currentHearts)
         {
+            if (currentHearts >= 1)
+            {
+                CancelBlink1();
+            }
+            if (currentHearts >= 2)
+            {
+                CancelBlink2();
+            }
+            if (currentHearts >= 3)
+            {
+                CancelBlink3();
+            }
             Heart1.SetActive(hearts >= 1);
             Heart2.SetActive(hearts >= 2);
             Heart3.SetActive(hearts >= 3);
@@ -150,15 +175,17 @@ public class GameManager : MonoBehaviour {
             }
             if (currentHearts < 3 && previousHearts >= 3)
             {
+                heart3Blinking = true;
                 StartBlink(3);
             }
             if (currentHearts < 2 && previousHearts >= 2)
             {
+                heart2Blinking = true;
                 StartBlink(2);
             }
             if (currentHearts < 1 && previousHearts >= 1)
             {
-				// we don't actually want the last heart to blink away, because the player died
+                // we don't actually want the last heart to blink away, because the player died
                 //StartBlink(1);
             }
         }
@@ -189,7 +216,7 @@ public class GameManager : MonoBehaviour {
     {
         SetKeyFragments(currentKeyFragments + 1);
         AkSoundEngine.PostEvent("Checkpoint", this.gameObject);
-		Score.addScore(50);
+        Score.addScore(50);
     }
 
     public int GetFragments()
@@ -197,45 +224,72 @@ public class GameManager : MonoBehaviour {
         return this.currentKeyFragments;
     }
 
+    private void CancelBlink1()
+    {
+        CancelInvoke("ToggleHeart1");
+        heart1Blinking = false;
+        heart1BlinkCount = 0;
+        Heart1.SetActive(true);
+    }
+
+    private void CancelBlink2()
+    {
+        CancelInvoke("ToggleHeart2");
+        heart2Blinking = false;
+        heart2BlinkCount = 0;
+        Heart2.SetActive(true);
+    }
+
+    private void CancelBlink3()
+    {
+        CancelInvoke("ToggleHeart3");
+        heart3Blinking = false;
+        heart3BlinkCount = 0;
+        Heart3.SetActive(true);
+    }
+
     private void StartBlink(int heart)
     {
-        if (heart == 1 && heart1BlinkState > 0 || heart == 2 && heart2BlinkState > 0 || heart == 3 && heart3BlinkState > 0)
+        if (heart == 1 && heart1BlinkCount > 0 || heart == 2 && heart2BlinkCount > 0 || heart == 3 && heart3BlinkCount > 0)
         {
             return;
         }
-        
+
         InvokeRepeating("ToggleHeart" + heart, 0.0f, HeartBlinkRate);
     }
 
     private void ToggleHeart1()
     {
+        if (!heart1Blinking) return;
         Heart1.SetActive(!Heart1.activeSelf);
-        heart1BlinkState++;
-        if (heart1BlinkState == HeartBlinkCount)
+        heart1BlinkCount++;
+        if (heart1BlinkCount == HeartBlinkCount)
         {
-            heart1BlinkState = 0;
+            heart1BlinkCount = 0;
             CancelInvoke("ToggleHeart1");
         }
     }
 
     private void ToggleHeart2()
     {
+        if (!heart2Blinking) return;
         Heart2.SetActive(!Heart2.activeSelf);
-        heart2BlinkState++;
-        if (heart2BlinkState == HeartBlinkCount)
+        heart2BlinkCount++;
+        if (heart2BlinkCount == HeartBlinkCount)
         {
-            heart2BlinkState = 0;
+            heart2BlinkCount = 0;
             CancelInvoke("ToggleHeart2");
         }
     }
 
     private void ToggleHeart3()
     {
+        if (!heart3Blinking) return;
         Heart3.SetActive(!Heart3.activeSelf);
-        heart3BlinkState++;
-        if (heart3BlinkState == HeartBlinkCount)
+        heart3BlinkCount++;
+        if (heart3BlinkCount == HeartBlinkCount)
         {
-            heart3BlinkState = 0;
+            heart3BlinkCount = 0;
             CancelInvoke("ToggleHeart3");
         }
     }
@@ -272,7 +326,7 @@ public class GameManager : MonoBehaviour {
     {
         DialogText.text += remainingDiaglogText.Substring(0, 1);
         remainingDiaglogText = remainingDiaglogText.Substring(1);
-        
+
         if (remainingDiaglogText.Equals(""))
         {
             dialogTextRendering = false;
