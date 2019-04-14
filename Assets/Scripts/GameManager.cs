@@ -139,6 +139,7 @@ public class GameManager : MonoBehaviour {
         }
         else if (previousHearts > currentHearts)
         {
+            AkSoundEngine.PostEvent("Reggie_Hurt", this.gameObject);
             if (currentHearts == 0) // if the hearts is 0, then the player died so don't knock them back on respawn
             {
                 direction = new Vector3();
@@ -166,6 +167,7 @@ public class GameManager : MonoBehaviour {
     public void PickUpOneHeart()
     {
         SetHearts(currentHearts + 1);
+        AkSoundEngine.PostEvent("Reggie_Success", this.gameObject);
     }
 
     public int GetHearts()
@@ -175,6 +177,10 @@ public class GameManager : MonoBehaviour {
 
     public void SetKeyFragments(int fragments)
     {
+        if (fragments > this.currentKeyFragments)
+        {
+            AkSoundEngine.PostEvent("Reggie_Success", this.gameObject);
+        }
         this.currentKeyFragments = fragments;
         KeyFragmentText.text = "x " + fragments;
     }

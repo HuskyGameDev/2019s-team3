@@ -5,11 +5,11 @@ using UnityEngine;
 public class Throwable : MonoBehaviour {
 
     bool live = false; // gameobject is in motion and should damage actors that it collides with
-    GameObject thrower;
+    bool playerThrown;
 
-    public virtual void PickUp(Transform guide, GameObject grabber)
+    public virtual bool PickUp(Transform guide, bool playerThrown)
     {
-        this.thrower = grabber;
+        this.playerThrown = playerThrown;
         live = false;
         // set gravity to false while holding it
         this.GetComponent<Rigidbody>().useGravity = false;
@@ -19,6 +19,8 @@ public class Throwable : MonoBehaviour {
 
         // Disable collisions
         this.GetComponent<Collider>().enabled = false;
+
+        return true;
     }
 
     public virtual void Throw(float throwspeed, Transform guide)
@@ -48,30 +50,31 @@ public class Throwable : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-
 	}
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(live && collision.gameObject != thrower)
+        if (live)
         {
             //object should check if it hit the ground, 
             //otherwise it should try to damage the player/actor it hit
-            Actor actor;
             if (collision.gameObject.name == "Terrain")
             {
                 live = false;
-                Debug.Log("throwable hit the ground");
+                Debug.Log("Rock has hit terrain");
             }
-            else if(collision.gameObject.tag == "Player")
+            else if(collision.gameObject.CompareTag("Player") && !playerThrown)
             {
+                Debug.Log("Rock has hit player");
                 //throwable has hit the player
                 Vector3 hitDirection = collision.transform.position - transform.position;
                 hitDirection = hitDirection.normalized;
                 FindObjectOfType<GameManager>().RemoveHearts(1, hitDirection);
             }
-            else if( (actor = collision.gameObject.GetComponent<Actor>()) != null)
+            else if(collision.gameObject.CompareTag("Enemy") && playerThrown)
             {
+                Actor actor = collision.gameObject.GetComponent<Actor>();
+                Debug.Log("Rock has hit actor " + collision.gameObject.name);
                 //throwable has hit an enemy
                 actor.Damage();
             }

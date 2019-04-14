@@ -8,18 +8,22 @@ public class Target : Throwable {
     private int slaveID;
     private bool active = true;
 
-    public new void PickUp(Transform guide, GameObject thrower)
+    public override bool PickUp(Transform guide, bool playerThrown)
     {
+        Debug.Log("state: " + active);
         if(!active)
-        {
-            (this as Throwable).PickUp(guide, thrower);
+        { 
+            base.PickUp(guide, playerThrown);
+            return true;
         }
+        return false;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.GetComponent<Throwable>() && active)
         {
+            Debug.Log("deactivating target");
             active = false;
             master.TargetHit();
             this.GetComponent<Rigidbody>().useGravity = true;
