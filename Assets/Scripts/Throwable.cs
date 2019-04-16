@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ public class Throwable : MonoBehaviour {
 
         // apply velocity on throwing
         this.GetComponent<Rigidbody>().velocity = new Vector3(guide.forward.x * throwspeed,
-            throwspeed / 10 + 2, guide.forward.z * throwspeed);
+            (float)Math.Pow(throwspeed / 5, 3) + 2, guide.forward.z * throwspeed);
         Debug.Log("Velocity after throwing: " + this.GetComponent<Rigidbody>().velocity);
 
         

@@ -16,8 +16,7 @@ public class EndGame : MonoBehaviour {
 	
 	private void OnTriggerEnter(Collider other)
     {
-		GameManager gameManager = FindObjectOfType<GameManager>();
-        if (other.tag == "Player" && gameManager.GetFragments() >= 5)
+        if (other.tag == "Player")
         {
             Application.LoadLevel("EndOfLevel");
         }
