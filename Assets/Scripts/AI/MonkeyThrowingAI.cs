@@ -47,10 +47,6 @@ public class MonkeyThrowingAI : MonoBehaviour
             Debug.Log("guide forward: " + guide.forward);
             shootPlayer();
         }
-        else
-        {
-
-        }
     }
 
     void shootPlayer()

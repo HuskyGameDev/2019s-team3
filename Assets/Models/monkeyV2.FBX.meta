@@ -219,7 +219,47 @@ ModelImporter:
     4300078: Line001
     4300080: Capsule005
     4300082: Capsule006
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #4'
+    second: {fileID: 2100000, guid: c5e6338af9231ac4f906bc19602380e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #6'
+    second: {fileID: 2100000, guid: d73ae6a487211234f88059e2b2cd0494, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #7'
+    second: {fileID: 2100000, guid: b2285baf919b9c949b5db4d0569b0208, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #8'
+    second: {fileID: 2100000, guid: 77b8589070296d64ea93fbcbd8936a15, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Lrjfu
+    second: {fileID: 2800000, guid: 6e362d593fbafea4aa51a24c3a079198, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: UoQDJ
+    second: {fileID: 2800000, guid: d9eefb78d6803d14cb054eaba588db29, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: brn
+    second: {fileID: 2800000, guid: 3078707da64f9754fb55a118b6ce1284, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: tiger-stripes-clipart-1
+    second: {fileID: 2800000, guid: 25f809edee6f5594dbf7753a611cf201, type: 3}
   materials:
     importMaterials: 1
     materialName: 0
