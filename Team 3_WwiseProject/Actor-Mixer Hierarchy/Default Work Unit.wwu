@@ -114,7 +114,7 @@
 								<Property Name="Spatialization" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>2</Value>
+										<Value>-3</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -636,7 +636,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-17</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -760,7 +760,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-17</Value>
+										<Value>-23</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -876,6 +876,196 @@
 									</ChildrenList>
 									<ActiveSourceList>
 										<ActiveSource Name="Reggie Test Win" ID="{AF564426-E346-4BE7-88BF-6A1694EEF342}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Pickup" ID="{0A6A787D-3F73-4E5D-9F9C-AC93DB4A63E4}" ShortID="1065531428">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Pickup" ID="{C5AAC722-829F-4A36-AA53-FBB9DCA1B721}" ShortID="479270789">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup" ID="{C2FA5F2F-BA51-47E6-B12D-A402A4C03E91}" ShortID="7442171">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup" ID="{C2FA5F2F-BA51-47E6-B12D-A402A4C03E91}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup2" ID="{A1676650-B67C-4D23-8290-D8B2C6A5F1B9}" ShortID="715564425">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup2" ID="{CF109823-E4DD-41EE-AF9A-CCD1B5A53D48}" ShortID="294528709">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup2" ID="{CF109823-E4DD-41EE-AF9A-CCD1B5A53D48}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup3" ID="{2007D447-D65B-49AB-84D2-180D4C90E763}" ShortID="502311411">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup3" ID="{65909905-6C07-47B8-B0FC-0D64A6F794F0}" ShortID="678407985">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup3" ID="{65909905-6C07-47B8-B0FC-0D64A6F794F0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup4" ID="{2A6CA0B6-7398-4861-9FE0-9BE2DF7AE593}" ShortID="1013755056">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup4" ID="{AA118FB5-FCBC-4D02-BAC1-482F8A8F119A}" ShortID="549022714">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup4.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup4" ID="{AA118FB5-FCBC-4D02-BAC1-482F8A8F119A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Pickup5" ID="{2AFBC9FB-6B13-4D02-95DF-4CE9845399DB}" ShortID="643189406">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Pickup5" ID="{0340387F-7908-4221-8F6D-5E2CD1A59C53}" ShortID="410963813">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Pickup5.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Pickup5" ID="{0340387F-7908-4221-8F6D-5E2CD1A59C53}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Throw" ID="{6EA702B5-5213-4FBF-877F-5C1F8F63AB49}" ShortID="8141262">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Reggie Throwing" ID="{72D9DDE8-C784-4305-82A5-630FF45D417F}" ShortID="105943716">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing" ID="{B3C62994-584B-4B1E-84F6-7E9F77624CCC}" ShortID="823350290">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing" ID="{B3C62994-584B-4B1E-84F6-7E9F77624CCC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Throwing2" ID="{18F3EB75-81DA-4A27-B171-CBD6AFE864EA}" ShortID="68798049">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing2" ID="{011E552A-16CB-471C-A08A-B64F7C371AA2}" ShortID="937921317">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing2" ID="{011E552A-16CB-471C-A08A-B64F7C371AA2}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Reggie Throwing3" ID="{1C530155-07D8-4927-90E5-04FC8F0D68D4}" ShortID="993080381">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{735C867A-6ADB-4113-A72E-1F871769FE54}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{C0850C93-C0E2-40FB-9D5C-CC8BFB980E98}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Reggie Throwing3" ID="{33A0EC4A-FA61-4569-ABCD-782BF62C0AE7}" ShortID="770573470">
+											<Language>SFX</Language>
+											<AudioFile>Reggie Throwing3.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Reggie Throwing3" ID="{33A0EC4A-FA61-4569-ABCD-782BF62C0AE7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>

@@ -187,6 +187,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Reggie_Pickup" ID="{3317E4E7-E544-4377-A3D0-845FCBE14379}">
+					<ChildrenList>
+						<Action Name="" ID="{3B1ED397-EC9B-4A93-957A-35E33FBCB067}" ShortID="356826345">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Pickup" ID="{0A6A787D-3F73-4E5D-9F9C-AC93DB4A63E4}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Reggie_Throw" ID="{5987D3D7-BEFC-44E9-AA4B-E29AAA3EEFD8}">
+					<ChildrenList>
+						<Action Name="" ID="{7ED64126-37FD-43A0-A263-49B69A36DCFA}" ShortID="988875452">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Throw" ID="{6EA702B5-5213-4FBF-877F-5C1F8F63AB49}" WorkUnitID="{495ADE7E-D2B0-4576-BA2F-52B516657426}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
