@@ -36,8 +36,10 @@ public class Throwable : MonoBehaviour {
         this.GetComponent<Rigidbody>().useGravity = true;
 
         // apply velocity on throwing
-        this.GetComponent<Rigidbody>().velocity = new Vector3(guide.forward.x * throwspeed,
-            (float)Math.Pow(throwspeed / 5, 3) + 2, guide.forward.z * throwspeed);
+        this.GetComponent<Rigidbody>().velocity = playerThrown ?
+            new Vector3(guide.forward.x * throwspeed, (float)Math.Pow(throwspeed / 5, 3) + 2, guide.forward.z * throwspeed) :
+            new Vector3(guide.forward.x * throwspeed, throwspeed / 10 + 2, guide.forward.z * throwspeed);
+            
         Debug.Log("Velocity after throwing: " + this.GetComponent<Rigidbody>().velocity);
 
         
