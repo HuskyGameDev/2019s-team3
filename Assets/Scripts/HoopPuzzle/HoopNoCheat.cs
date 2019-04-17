@@ -20,7 +20,7 @@ public class HoopNoCheat : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            Vector3 direction = gameObject.transform.position - other.transform.position;
+            Vector3 direction = other.transform.position - gameObject.transform.position;
             direction.Normalize();
             FindObjectOfType<PlayerController>().Knockback(direction);
             gameManager.ShowDialog("No cheating!");
