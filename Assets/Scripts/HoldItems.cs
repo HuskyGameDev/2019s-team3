@@ -103,6 +103,7 @@
 			return;
         if(holditem.GetComponent<Throwable>().PickUp(guide, true))
             canHold = false;
+        AkSoundEngine.PostEvent("Reggie_Pickup", this.gameObject);
      }
  
     private void Drop()
@@ -114,5 +115,6 @@
 		 primed = false;
 		 throwSpeed = originalThrowSpeed;
          holditem = null;
-     }
+        AkSoundEngine.PostEvent("Reggie_Throw", this.gameObject);
+    }
  }//class
