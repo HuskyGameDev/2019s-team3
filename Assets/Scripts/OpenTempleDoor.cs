@@ -6,7 +6,7 @@ public class OpenTempleDoor : MonoBehaviour {
 
     public GameObject[] doorObjects;
     private GameManager gameManager;
-    public int KeyFragmentsRequired = 5;
+    public int KeyFragmentsRequired = 1;
 
 	// Use this for initialization
 	void Start () {

@@ -23,6 +23,12 @@
  
 	void Update()
 	{
+        if (Time.timeScale == 0)
+        {
+            // cannot pick up or throw when the game is paused
+            return;
+        }
+
 		// If we're currently holding an object
 		if (!canHold) {
 			if (Input.GetButtonDown("Grab")) {

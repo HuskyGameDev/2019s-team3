@@ -87,7 +87,7 @@ public class TutorialAreaDialogManager : MonoBehaviour
             case 9:
                 if (!gameManager.IsShowingDialog())
                 {
-                    gameManager.ShowDialog("You'd have to get all five hidden key fragments first to unlock the gate and -");
+                    gameManager.ShowDialog("You'd have to get all seven hidden key fragments first to unlock the gate and -");
                     dialogStep++;
                 }
                 break;

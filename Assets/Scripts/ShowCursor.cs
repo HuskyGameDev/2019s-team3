@@ -6,7 +6,8 @@ public class ShowCursor : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
 	}
 	
 	// Update is called once per frame
