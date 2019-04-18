@@ -35,21 +35,25 @@ public class MonkeyThrowingAI : MonoBehaviour
     {
         if ((Time.realtimeSinceStartup - time) > newRockDelay && !holding)
         {
-            
-            holding = true;
-            currentRock = Instantiate(projectile, guide, true);
-            projectile.PickUp(guide, false);
-            Debug.Log(guide.position);
-            time = Time.realtimeSinceStartup;
+            GrabRock();
         }
         else if ((Vector3.Distance(guide.position, player.position) < 10) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
         {
             Debug.Log("guide forward: " + guide.forward);
-            shootPlayer();
+            ShootPlayer();
         }
     }
 
-    void shootPlayer()
+    protected virtual void GrabRock()
+    {
+        holding = true;
+        currentRock = Instantiate(projectile, guide, true);
+        projectile.PickUp(guide, false);
+        Debug.Log(guide.position);
+        time = Time.realtimeSinceStartup;
+    }
+
+    void ShootPlayer()
     {
         guide.DetachChildren();
         currentRock.Throw(throwSpeed, guide);
