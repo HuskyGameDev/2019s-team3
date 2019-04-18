@@ -58150,6 +58150,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4649731773785380, guid: 41544e4aa13abe24eb30eec783115b5e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 260.77615
@@ -58201,6 +58206,51 @@ Prefab:
         type: 2}
       propertyPath: chargeRate
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[5].x
+      value: 192.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[5].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[5].z
+      value: 216.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[6].x
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[6].y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[6].z
+      value: 272.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[7].x
+      value: 321.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[7].y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114709720447161492, guid: 41544e4aa13abe24eb30eec783115b5e,
+        type: 2}
+      propertyPath: respawns.Array.data[7].z
+      value: 426.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41544e4aa13abe24eb30eec783115b5e, type: 2}
