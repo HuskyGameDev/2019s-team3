@@ -58,7 +58,6 @@ public class MonkeyThrowingAI : MonoBehaviour
         guide.DetachChildren();
         Vector3 throwAngle = player.transform.position - guide.transform.position;
         throwAngle.y += 2;
-        //throwAngle.Normalize();
         currentRock.Throw(throwSpeed, throwAngle);
         holding = false;
         time = Time.realtimeSinceStartup;

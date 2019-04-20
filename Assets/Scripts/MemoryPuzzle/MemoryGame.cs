@@ -34,7 +34,6 @@ public class MemoryGame : MonoBehaviour {
     // Use this for initialization
     void Start() {
         gameManager = FindObjectOfType<GameManager>();
-        gameManager.PickUpOneCoin();
         for (int i = 0; i < objects.Length; i++)
         {
             MemTileCollider m = objects[i].GetComponent<MemTileCollider>();

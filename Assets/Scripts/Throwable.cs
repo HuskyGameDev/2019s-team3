@@ -75,29 +75,39 @@ public class Throwable : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        Interact(collision.gameObject, collision.transform);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Interact(other.gameObject, other.transform);
+    }
+
+    private void Interact(GameObject gameObject, Transform t)
+    {
         if (live)
         {
             //object should check if it hit the ground, 
             //otherwise it should try to damage the player/actor it hit
-            if (collision.gameObject.name == "Terrain")
+            if (gameObject.name == "Terrain")
             {
                 live = false;
                 Debug.Log("Rock has hit terrain");
             }
-            else if(collision.gameObject.CompareTag("Player") && !playerThrown)
+            else if (gameObject.CompareTag("Player") && !playerThrown)
             {
                 Debug.Log("Rock has hit player");
                 //throwable has hit the player
-                Vector3 hitDirection = collision.transform.position - transform.position;
+                Vector3 hitDirection = t.position - transform.position;
                 hitDirection = hitDirection.normalized;
                 FindObjectOfType<GameManager>().RemoveHearts(1, hitDirection);
             }
-            else if(collision.gameObject.CompareTag("Enemy") && playerThrown)
+            else if (gameObject.CompareTag("Enemy") && playerThrown)
             {
-                Actor actor = collision.gameObject.GetComponent<Actor>();
-                Debug.Log("Rock has hit actor " + collision.gameObject.name);
+                Actor actor = gameObject.GetComponent<Actor>();
+                Debug.Log("Rock has hit actor " + gameObject.name);
                 //throwable has hit an enemy
-                actor.Damage();
+                actor.Die();
             }
 
         }
