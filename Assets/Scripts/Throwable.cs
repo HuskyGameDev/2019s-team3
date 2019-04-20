@@ -24,7 +24,7 @@ public class Throwable : MonoBehaviour {
         return true;
     }
 
-    public virtual void Throw(float throwspeed, Transform guide)
+    void PreThrow()
     {
         // re-enable collisions
         this.GetComponent<Collider>().enabled = true;
@@ -34,16 +34,28 @@ public class Throwable : MonoBehaviour {
 
         // set our Gravity to true again.
         this.GetComponent<Rigidbody>().useGravity = true;
+    }
+
+    public virtual void Throw(float throwspeed, Vector3 direction)
+    {
+        PreThrow();
+        this.GetComponent<Rigidbody>().AddForce(
+               new Vector3(direction.x * throwspeed, 
+                        (direction.y >= 0) ? direction.y * throwspeed/10 + 2 : (direction.y * throwspeed) * .8f,
+                        direction.z * throwspeed),
+               ForceMode.Impulse);
+        Debug.Log("Velocity after throwing: " + this.GetComponent<Rigidbody>().velocity);
+    }
+
+    public virtual void Throw(float throwspeed, Transform guide)
+    {
+        PreThrow();
 
         // apply velocity on throwing
         this.GetComponent<Rigidbody>().velocity = playerThrown ?
             new Vector3(guide.forward.x * throwspeed, (float)Math.Pow(throwspeed / 5, 3) + 2, guide.forward.z * throwspeed) :
-            new Vector3(guide.forward.x * throwspeed, throwspeed / 10 + 2, guide.forward.z * throwspeed);
-            
+            new Vector3(guide.forward.x * throwspeed, 0, guide.forward.z * throwspeed);
         Debug.Log("Velocity after throwing: " + this.GetComponent<Rigidbody>().velocity);
-
-        
-        
     }
 
     // Use this for initialization

@@ -15,8 +15,8 @@ public class MonkeyThrowingAI : MonoBehaviour
     public Transform guide;
     public GameObject thisMonkey;
     bool isClose;
-    const float newRockDelay = 3;
-    const float throwDelay = 1;
+    const float newRockDelay = 1;
+    const float throwDelay = .5f;
     float time;
     public Throwable projectile;
     bool holding = false;
@@ -35,24 +35,28 @@ public class MonkeyThrowingAI : MonoBehaviour
     {
         if ((Time.realtimeSinceStartup - time) > newRockDelay && !holding)
         {
-            
-            holding = true;
-            currentRock = Instantiate(projectile, guide, true);
-            projectile.PickUp(guide, false);
-            Debug.Log(guide.position);
-            time = Time.realtimeSinceStartup;
+            GrabRock();
         }
-        else if ((Vector3.Distance(guide.position, player.position) < 10) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
+        else if ((Vector3.Distance(guide.position, player.position) < 30) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
         {
             Debug.Log("guide forward: " + guide.forward);
-            shootPlayer();
+            ShootPlayer();
         }
     }
 
-    void shootPlayer()
+    protected virtual void GrabRock()
+    {
+        holding = true;
+        currentRock = Instantiate(projectile, guide, true);
+        projectile.PickUp(guide, false);
+        Debug.Log(guide.position);
+        time = Time.realtimeSinceStartup;
+    }
+
+    void ShootPlayer()
     {
         guide.DetachChildren();
-        currentRock.Throw(throwSpeed, guide);
+        currentRock.Throw(throwSpeed, player.position - transform.position);
         holding = false;
         time = Time.realtimeSinceStartup;
     }
