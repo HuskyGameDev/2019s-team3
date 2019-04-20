@@ -30,7 +30,7 @@ public class TutorialAreaDialogManager : MonoBehaviour
             case 1:
                 if (!gameManager.IsShowingDialog())
                 {
-                    gameManager.ShowDialog("Press WASD or use the left joystick to move around. Pressing SHIFT or LJ will make you run.");
+                    gameManager.ShowDialog("Press WASD or use the left joystick to move around. Holding SHIFT or LJ will make you run.");
                     dialogStep++;
                 }
                 break;
@@ -59,39 +59,46 @@ public class TutorialAreaDialogManager : MonoBehaviour
             case 5:
                 if (!gameManager.IsShowingDialog())
                 {
+                    gameManager.ShowDialog("Some objects, like this red ball can be picked up by pressing LMOUSE or X on the controller.");
+                    dialogStep++;
+                }
+                break;
+            case 6:
+                if (!gameManager.IsShowingDialog())
+                {
                     gameManager.ShowDialog("Good luck, Reggie!");
                     dialogStep = -1;
                 }
                 break;
-            case 6:
+            case 7:
                 if (!gameManager.IsShowingDialog())
                 {
                     gameManager.ShowDialog("Whoops, allow me to introduce myself. I'm Foxtail. Remember me? From all that time ago?");
                     dialogStep++;
                 }
                 break;
-            case 7:
+            case 8:
                 if (!gameManager.IsShowingDialog())
                 {
                     gameManager.ShowDialog("You don't? Oh. Well let me refresh your memory. I'm your worst nightmare.");
                     dialogStep++;
                 }
                 break;
-            case 8:
+            case 9:
                 if (!gameManager.IsShowingDialog())
                 {
                     gameManager.ShowDialog("I'll make sure you never get that treasure hidden inside the temple!");
                     dialogStep++;
                 }
                 break;
-            case 9:
+            case 10:
                 if (!gameManager.IsShowingDialog())
                 {
                     gameManager.ShowDialog("You'd have to get all seven hidden key fragments first to unlock the gate and -");
                     dialogStep++;
                 }
                 break;
-            case 10:
+            case 11:
                 if (!gameManager.IsShowingDialog())
                 {
                     gameManager.ShowDialog("Oh. I shouldn't have told you that.");
@@ -103,11 +110,17 @@ public class TutorialAreaDialogManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        dialogStep = 0;
+        if (other.CompareTag("Player"))
+        {
+            dialogStep = 0;
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        dialogStep = 6;
+        if (other.CompareTag("Player"))
+        {
+            dialogStep = 6;
+        }
     }
 }
