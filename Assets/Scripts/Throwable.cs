@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class Throwable : MonoBehaviour {
 
+    public bool inHand = false;
     bool live = false; // gameobject is in motion and should damage actors that it collides with
     bool playerThrown;
 
     public virtual bool PickUp(Transform guide, bool playerThrown)
     {
+        inHand = true;
+
         this.playerThrown = playerThrown;
         live = false;
         // set gravity to false while holding it
@@ -31,6 +34,9 @@ public class Throwable : MonoBehaviour {
 
         // allow this object to damage actors
         live = true;
+
+        // This object is no longer being held
+        inHand = false;
 
         // set our Gravity to true again.
         this.GetComponent<Rigidbody>().useGravity = true;

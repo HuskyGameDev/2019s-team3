@@ -7791,6 +7791,11 @@ Prefab:
       propertyPath: m_Name
       value: Monkey (62)
       objectReference: {fileID: 0}
+    - target: {fileID: 136751336450039702, guid: f548097675d100d47a46fc35df079e77,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f548097675d100d47a46fc35df079e77, type: 2}
   m_IsPrefabAsset: 0
@@ -11180,6 +11185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15b0fed48171734499f207c0336b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inHand: 0
 --- !u!1001 &243542814
 Prefab:
   m_ObjectHideFlags: 0
@@ -74386,6 +74392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15b0fed48171734499f207c0336b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inHand: 0
 --- !u!54 &1423056249
 Rigidbody:
   m_ObjectHideFlags: 0
