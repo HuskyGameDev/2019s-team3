@@ -11,12 +11,12 @@ public class MonkeyThrowingAI : MonoBehaviour
 {
 
     const float throwSpeed = 20;
-    Transform player;
+    GameObject player;
     public Transform guide;
     public GameObject thisMonkey;
     bool isClose;
-    const float newRockDelay = 3;
-    const float throwDelay = 1;
+    const float newRockDelay = 1;
+    const float throwDelay = .5f;
     float time;
     public Throwable projectile;
     bool holding = false;
@@ -25,7 +25,7 @@ public class MonkeyThrowingAI : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
         time = Time.realtimeSinceStartup;
         Debug.Log("monkey has tag " + tag);
     }
@@ -35,28 +35,30 @@ public class MonkeyThrowingAI : MonoBehaviour
     {
         if ((Time.realtimeSinceStartup - time) > newRockDelay && !holding)
         {
-            
-            holding = true;
-            currentRock = Instantiate(projectile, guide, true);
-            projectile.PickUp(guide, false);
-            Debug.Log(guide.position);
-            time = Time.realtimeSinceStartup;
+            GrabRock();
         }
-        else if ((Vector3.Distance(guide.position, player.position) < 10) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
+        else if ((Vector3.Distance(guide.position, player.transform.position) < 25) && holding && (Time.realtimeSinceStartup - time) > throwDelay)
         {
             Debug.Log("guide forward: " + guide.forward);
-            shootPlayer();
-        }
-        else
-        {
-
+            ShootPlayer();
         }
     }
 
-    void shootPlayer()
+    protected virtual void GrabRock()
+    {
+        holding = true;
+        currentRock = Instantiate(projectile, guide, true);
+        projectile.PickUp(guide, false);
+        Debug.Log(guide.position);
+        time = Time.realtimeSinceStartup;
+    }
+
+    void ShootPlayer()
     {
         guide.DetachChildren();
-        currentRock.Throw(throwSpeed, guide);
+        Vector3 throwAngle = player.transform.position - guide.transform.position;
+        throwAngle.y += 2;
+        currentRock.Throw(throwSpeed, throwAngle);
         holding = false;
         time = Time.realtimeSinceStartup;
     }

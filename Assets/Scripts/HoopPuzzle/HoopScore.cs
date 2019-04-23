@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,7 +23,8 @@ public class HoopScore : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!scored)
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.name == "Ball" && !scored)
         {
             scored = true;
             manager.Score();

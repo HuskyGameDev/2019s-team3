@@ -118,6 +118,7 @@ public class GameManager : MonoBehaviour
 
     public void PickUpOneCoin()
     {
+        AkSoundEngine.PostEvent("CoinPickup", gameObject);
         SetCoins(currentCoins + 1);
         Score.addScore(1);
     }

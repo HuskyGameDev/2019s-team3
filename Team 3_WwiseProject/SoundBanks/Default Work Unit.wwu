@@ -8,6 +8,8 @@
 						<ObjectRef Name="CoinPickup" ID="{AD0EBB3A-231D-4074-9BF3-C80130277E0D}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Music_Jungle" ID="{00047785-DCAC-4109-AEFA-1F9ACD818227}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Jump" ID="{B5306ED7-8742-4348-9F2E-3FFFD3EB4024}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reggie_Pickup" ID="{3317E4E7-E544-4377-A3D0-845FCBE14379}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Reggie_Throw" ID="{5987D3D7-BEFC-44E9-AA4B-E29AAA3EEFD8}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="JungleAmbience" ID="{D6196106-E4E8-476A-95DD-6EF3089AE7E4}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Reggie_Hurt" ID="{C2EBF918-AFC6-47F3-8425-BBDCB08056FE}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Reggie_Success" ID="{0E049DBC-1B6D-4846-9D73-C043415AA3D4}" WorkUnitID="{019D30F8-E35E-4989-A439-0E92721EE23E}" Filter="7" Origin="Manual"/>

@@ -52,6 +52,8 @@ GameObject[] pauseObjects;
 
 	//shows objects with ShowOnPause tag
 	public void showPaused(){
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
 		foreach(GameObject g in pauseObjects){
 			g.SetActive(true);
 		}
@@ -59,6 +61,8 @@ GameObject[] pauseObjects;
 
 	//hides objects with ShowOnPause tag
 	public void hidePaused(){
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 		foreach(GameObject g in pauseObjects){
 			g.SetActive(false);
 		}

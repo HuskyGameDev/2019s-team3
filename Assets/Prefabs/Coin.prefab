@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 65524866504385394}
   - component: {fileID: 114481916369990166}
   - component: {fileID: 114298830028980950}
-  - component: {fileID: 114661647663474334}
   - component: {fileID: 114393097508147714}
   - component: {fileID: 114066374292239992}
   m_Layer: 0
@@ -274,28 +273,3 @@ MonoBehaviour:
   TranslationDistanceX: 0
   TranslationDistanceY: 0.2
   TranslationDistanceZ: 0
---- !u!114 &114661647663474334
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1090016738167788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f77b8cd437bd8594a93dda83c578cee8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7f422d6
-  useOtherObject: 1
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  eventID: -1542538686
-  m_callbackData: {fileID: 0}
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  valueGuid: 3abb0ead1d2374409bf3c80130277e0d
-  multiPositionArray: []
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0

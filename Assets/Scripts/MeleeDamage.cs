@@ -14,29 +14,32 @@ public class MeleeDamage : MonoBehaviour {
         rand = new System.Random();
         player = GameObject.FindGameObjectWithTag("Player");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetButtonDown("Grab") && snakes.Count > 0)
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetButtonDown("Grab") && snakes.Count > 0)
         {
-            Debug.Log("trying to do something");
             var snakeObject = snakes[rand.Next(snakes.Count)];
 
-            Vector3 hitDirection = player.transform.position - snakeObject.transform.position;
-            hitDirection = hitDirection.normalized;
-            snakeObject.transform.position += 2 * hitDirection;
-        }
-	}
+            if (snakeObject.GetComponent<WanderingAI>().health > 1)
+            {
+                Vector3 hitDirection = snakeObject.transform.position - player.transform.position;
+                hitDirection = hitDirection.normalized;
+                snakeObject.transform.position += 2 * hitDirection;
+            }
+            else
+            {
+                snakes.Remove(snakeObject);
+            }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log(collision.gameObject.tag);
+            snakeObject.GetComponent<Actor>().Damage();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("something has entered: " + other.tag);
-        if (other.gameObject.tag == "Snake")
+        if (other.gameObject.CompareTag("Enemy"))
         {
             snakes.Add(other.gameObject);
         }
@@ -44,7 +47,7 @@ public class MeleeDamage : MonoBehaviour {
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Snake" && snakes.Contains(other.gameObject))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             snakes.Remove(other.gameObject);
         }

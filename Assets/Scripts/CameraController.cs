@@ -33,6 +33,11 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
+        if (Time.timeScale == 0)
+        {
+            // don't allow the camera to move when the game is paused
+            return;
+        }
 		
 		pivot.transform.position = target.transform.position;
 		

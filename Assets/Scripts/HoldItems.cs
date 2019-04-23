@@ -23,6 +23,12 @@
  
 	void Update()
 	{
+        if (Time.timeScale == 0)
+        {
+            // cannot pick up or throw when the game is paused
+            return;
+        }
+
 		// If we're currently holding an object
 		if (!canHold) {
 			if (Input.GetButtonDown("Grab")) {
@@ -103,6 +109,7 @@
 			return;
         if(holditem.GetComponent<Throwable>().PickUp(guide, true))
             canHold = false;
+        AkSoundEngine.PostEvent("Reggie_Pickup", this.gameObject);
      }
  
     private void Drop()
@@ -114,5 +121,6 @@
 		 primed = false;
 		 throwSpeed = originalThrowSpeed;
          holditem = null;
-     }
+        AkSoundEngine.PostEvent("Reggie_Throw", this.gameObject);
+    }
  }//class

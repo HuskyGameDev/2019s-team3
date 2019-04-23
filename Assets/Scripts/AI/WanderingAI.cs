@@ -13,7 +13,9 @@ public class WanderingAI : Actor
     private float timer;
     private GameObject player;
     private GameManager gameManager;
-    private float originalSpeed; 
+    private float originalSpeed;
+
+    public int health = 2;
 
     // Use this for initialization
     void OnEnable()
@@ -72,11 +74,16 @@ public class WanderingAI : Actor
 
     public override void Damage()
     {
-        throw new System.NotImplementedException();
+        health--;
+        if (health == 0)
+        {
+            Die();
+        }
     }
 
     public override void Die()
     {
-        throw new System.NotImplementedException();
+        FindObjectOfType<GameManager>().PickUpOneCoin();
+        Destroy(gameObject, .1f);
     }
 }

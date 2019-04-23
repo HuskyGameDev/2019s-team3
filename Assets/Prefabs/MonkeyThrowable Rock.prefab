@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 54181502184818918}
   - component: {fileID: 65997799466561920}
   - component: {fileID: 114534517881480470}
+  - component: {fileID: 114122393706399068}
   m_Layer: 0
   m_Name: MonkeyThrowable Rock
   m_TagString: Untagged
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1433589569239496}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.324316, y: 1.492732, z: 0.011984706}
+  m_LocalPosition: {x: 97.9807, y: 3.7716393, z: 246.70068}
   m_LocalScale: {x: -0.020158, y: -0.020158, z: -0.020158}
   m_Children:
   - {fileID: 4894367383474420}
@@ -142,6 +143,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 23.561825, y: 23.401691, z: 23.305857}
   m_Center: {x: -6.7809052, y: -6.700839, z: 6.6529303}
+--- !u!114 &114122393706399068
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1433589569239496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbef6f9224d3e07468cdb7246b7b92fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwable: {fileID: 114534517881480470}
+  startTime: 0
 --- !u!114 &114534517881480470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,3 +167,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f15b0fed48171734499f207c0336b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inHand: 1
